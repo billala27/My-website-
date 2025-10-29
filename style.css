@@ -1,0 +1,88 @@
+body {
+  font-family: 'Ruwudu', serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+.hero {
+  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('images/logo.jpg') no-repeat right top;
+  background-size: 150px;
+  padding: 50px 20px;
+}
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+h1 {
+  color: #ff7b00;
+  font-size: 2.5em;
+}
+.slider {
+  margin: 30px 0;
+  position: relative;
+}
+.slide {
+  display: none;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: auto;
+}
+footer {
+  background: #005073;
+  color: white;
+  padding: 15px;
+  font-size: 1em;
+}
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}.background-image {
+  width: 100%;
+  height: 200px; /* ارتفاع الخلفية حسب رغبتك */
+  background-image: url('images/Hassan.png'); /* ضع مسار الصورة الصحيح */
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  border-radius: 12px; /* اختياري إذا أردت حواف ناعمة */
+}
+.map-button {
+  font-family: 'Mada', sans-serif; /* مثال لخط مميز عربي */
+  font-size: 20px;
+  font-weight: bold;
+  color: #80C3FF;
+  text-shadow: 1px 1px 2px #ccc; /* ظل خفيف */
+}
