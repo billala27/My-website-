@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a href="#" class="side-admin-btn" onclick="openAdmin()">
+  <a href="admin.html" class="side-admin-btn">
   ⚙️ <span>لوحة التحكم</span>
 </a>
 
@@ -278,28 +278,12 @@
 </body>
 </html>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-<script>
-function openAdmin() {
-  let pass = prompt("أدخل كلمة السر للدخول إلى لوحة التحكم:");
-
-  if (pass === "bilal Noor 3omri 31") {
-    window.location.href = "admin.html";
-  } else {
-    alert("كلمة السر غير صحيحة ❌");
-  }
-}
-</script>
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script>
-  AOS.init();
+  AOS.init();<section data-aos="fade-up" data-aos-duration="1000">
 </script>
+<p class="custom-box">شكراً على زيارتك موقعي</p>
 
-<section data-aos="fade-up" data-aos-duration="1000">
-  <p class="custom-box">شكراً على زيارتك موقعي</p>
-</section>
 <style>
   .custom-box {
     display: inline-block;
