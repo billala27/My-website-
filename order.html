@@ -3,144 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>إتمام الطلب</title>
+<title>طلب المنتج</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Cairo', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+body{
+  font-family:'Cairo',sans-serif;
+  background: linear-gradient(135deg,#00f7ff,#0072ff);
+  margin:0;
+  padding:0;
 }
 
-/* الكارد */
-.form-box {
-  width: 90%;
-  max-width: 420px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.3);
-  color: white;
+.form-container{
+  max-width:400px;
+  margin:50px auto;
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(0,0,0,0.2);
 }
 
-/* العنوان */
-.form-box h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #00f7ff;
+h2{
+  text-align:center;
+  color:#0072ff;
 }
 
-/* الحقول */
-input, select {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 10px;
-  outline: none;
+input,select{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
 }
 
-/* زر */
-button {
-  width: 100%;
-  padding: 14px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(45deg, #00f7ff, #00ff88);
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+button{
+  width:100%;
+  padding:15px;
+  background:linear-gradient(45deg,#ff0000,#ff7300);
+  border:none;
+  color:#fff;
+  font-size:16px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
 }
 
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #00f7ff;
+button:hover{
+  transform:scale(1.05);
+}
+
+.product-name{
+  background:#f1f1f1;
+  padding:10px;
+  border-radius:8px;
+  text-align:center;
+  margin-bottom:15px;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="form-box">
+<div class="form-container">
+  <h2>🛒 إتمام الطلب</h2>
 
-<h2>🛒 إتمام الطلب</h2>
+  <div class="product-name" id="productName">...</div>
 
-<form onsubmit="send(event)">
+  <input type="text" id="name" placeholder="اسمك الكامل" required>
+  <input type="tel" id="phone" placeholder="رقم الهاتف" required>
 
-<input type="text" id="name" placeholder="👤 الاسم الكامل" required>
+  <select id="state">
+    <option>اختر الولاية</option>
+    <option>وهران</option>
+    <option>الجزائر</option>
+    <option>عنابة</option>
+    <option>سطيف</option>
+    <option>تلمسان</option>
+    <option>قسنطينة</option>
+    <option>الشلف</option>
+  </select>
 
-<input type="tel" id="phone" placeholder="📞 رقم الهاتف" required>
+  <input type="text" id="address" placeholder="العنوان الكامل">
 
-<select id="state" required>
-  <option value="">📍 اختر الولاية</option>
-  <option>أدرار</option>
-  <option>الشلف</option>
-  <option>الأغواط</option>
-  <option>أم البواقي</option>
-  <option>باتنة</option>
-  <option>بجاية</option>
-  <option>بسكرة</option>
-  <option>بشار</option>
-  <option>البليدة</option>
-  <option>البويرة</option>
-  <option>تمنراست</option>
-  <option>تبسة</option>
-  <option>تلمسان</option>
-  <option>تيارت</option>
-  <option>تيزي وزو</option>
-  <option>الجزائر</option>
-  <option>الجلفة</option>
-  <option>جيجل</option>
-  <option>سطيف</option>
-  <option>سعيدة</option>
-  <option>سكيكدة</option>
-  <option>سيدي بلعباس</option>
-  <option>عنابة</option>
-  <option>قالمة</option>
-  <option>قسنطينة</option>
-  <option>المدية</option>
-  <option>مستغانم</option>
-  <option>المسيلة</option>
-  <option>معسكر</option>
-  <option>ورقلة</option>
-  <option>وهران</option>
-  <option>البيض</option>
-  <option>إليزي</option>
-  <option>برج بوعريريج</option>
-  <option>بومرداس</option>
-  <option>الطارف</option>
-  <option>تندوف</option>
-  <option>تيسمسيلت</option>
-  <option>الوادي</option>
-  <option>خنشلة</option>
-  <option>سوق أهراس</option>
-  <option>تيبازة</option>
-  <option>ميلة</option>
-  <option>عين الدفلى</option>
-  <option>النعامة</option>
-  <option>عين تموشنت</option>
-  <option>غرداية</option>
-  <option>غليزان</option>
-</select>
-
-<input type="text" id="product" placeholder="🛍️ اسم المنتج" required>
-
-<button type="submit">🚀 إرسال الطلب</button>
-
-</form>
-
+  <button onclick="sendOrder()">تأكيد الطلب</button>
 </div>
 
-<script>
 <script>
 // جلب اسم المنتج من الرابط
 const params = new URLSearchParams(window.location.search);
@@ -148,34 +98,26 @@ const product = params.get("product");
 
 document.getElementById("productName").innerText = product || "منتج غير محدد";
 
-function send(e){
-  e.preventDefault();
-
+// إرسال الطلب
+function sendOrder(){
   let name = document.getElementById("name").value;
   let phone = document.getElementById("phone").value;
   let state = document.getElementById("state").value;
-  let product = document.getElementById("product").value;
+  let address = document.getElementById("address").value;
 
-  let msg =
-`🛒 طلب جديد:
+  let message =
+`طلب جديد 🔥
+
+🛒 المنتج: ${product}
 👤 الاسم: ${name}
 📞 الهاتف: ${phone}
 📍 الولاية: ${state}
-📦 المنتج: ${product}`;
+🏠 العنوان: ${address}`;
 
-  window.open("https://wa.me/213795619382?text=" + encodeURIComponent(msg), "_blank");
+  let url = "https://wa.me/213795619382?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
 }
-</script>
-<script>
-window.onload = function() {
-  const params = new URLSearchParams(window.location.search);
-  const product = params.get("product");
-
-  if(product){
-    document.getElementById("product").value = product;
-  }
-}
-
 </script>
 
 </body>
