@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>لوحة التحكم</title>
+</head>
+<body>
+
+<h2>الطلبات</h2>
+<div id="orders"></div>
+
+<script>
+const container = document.getElementById("orders");
+
+const fakeOrders = [
+  {
+    name: "أحمد",
+    phone: "0550000000",
+    address: "الجزائر",
+    status: "قيد المعالجة"
+  },
+  {
+    name: "سارة",
+    phone: "0661111111",
+    address: "وهران",
+    status: "تم الشحن"
+  }
+];
+
+let html = "";
+
+fakeOrders.forEach((data) => {
+  html += `
+    <div style="border:1px solid #000;margin:10px;padding:10px;">
+      <p>الاسم: ${data.name}</p>
+      <p>الهاتف: ${data.phone}</p>
+      <p>العنوان: ${data.address}</p>
+      <p>الحالة: ${data.status}</p>
+    </div>
+  `;
+});
+
+container.innerHTML = html;
+</script>
+
+</body>
+</html>
