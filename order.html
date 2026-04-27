@@ -159,6 +159,16 @@ function send(e){
   window.open("https://wa.me/213795619382?text=" + encodeURIComponent(msg), "_blank");
 }
 </script>
+<script>
+window.onload = function() {
+  const params = new URLSearchParams(window.location.search);
+  const product = params.get("product");
+
+  if(product){
+    document.getElementById("product").value = product;
+  }
+}
+</script>
 
 </body>
 </html>
