@@ -26,7 +26,7 @@ body{
 
 h2{
   text-align:center;
-  color:#0072ff;
+  color:#0092ff;
 }
 
 input,select{
@@ -75,15 +75,56 @@ button:hover{
   <input type="text" id="name" placeholder="اسمك الكامل" required>
   <input type="tel" id="phone" placeholder="رقم الهاتف" required>
 
-  <select id="state">
-    <option>اختر الولاية</option>
-    <option>وهران</option>
-    <option>الجزائر</option>
-    <option>عنابة</option>
-    <option>سطيف</option>
-    <option>تلمسان</option>
-    <option>قسنطينة</option>
+  <select id="state" required>
+    <option value="">📍 اختر الولاية</option>
+    <option>أدرار</option>
     <option>الشلف</option>
+    <option>الأغواط</option>
+    <option>أم البواقي</option>
+    <option>باتنة</option>
+    <option>بجاية</option>
+    <option>بسكرة</option>
+    <option>بشار</option>
+    <option>البليدة</option>
+    <option>البويرة</option>
+    <option>تمنراست</option>
+    <option>تبسة</option>
+    <option>تلمسان</option>
+    <option>تيارت</option>
+    <option>تيزي وزو</option>
+    <option>الجزائر</option>
+    <option>الجلفة</option>
+    <option>جيجل</option>
+    <option>سطيف</option>
+    <option>سعيدة</option>
+    <option>سكيكدة</option>
+    <option>سيدي بلعباس</option>
+    <option>عنابة</option>
+    <option>قالمة</option>
+    <option>قسنطينة</option>
+    <option>المدية</option>
+    <option>مستغانم</option>
+    <option>المسيلة</option>
+    <option>معسكر</option>
+    <option>ورقلة</option>
+    <option>وهران</option>
+    <option>البيض</option>
+    <option>إليزي</option>
+    <option>برج بوعريريج</option>
+    <option>بومرداس</option>
+    <option>الطارف</option>
+    <option>تندوف</option>
+    <option>تيسمسيلت</option>
+    <option>الوادي</option>
+    <option>خنشلة</option>
+    <option>سوق أهراس</option>
+    <option>تيبازة</option>
+    <option>ميلة</option>
+    <option>عين الدفلى</option>
+    <option>النعامة</option>
+    <option>عين تموشنت</option>
+    <option>غرداية</option>
+    <option>غليزان</option>
   </select>
 
   <input type="text" id="address" placeholder="العنوان الكامل">
@@ -108,7 +149,7 @@ function sendOrder(){
   let message =
 `طلب جديد 🔥
 
-🛒 المنتج: ${product}
+🛒 المنتج: ${product || "غير محدد"}
 👤 الاسم: ${name}
 📞 الهاتف: ${phone}
 📍 الولاية: ${state}
@@ -116,7 +157,28 @@ function sendOrder(){
 
   let url = "https://wa.me/213795619382?text=" + encodeURIComponent(message);
 
-  window.open(url, "_blank");
+  window.location.href = url;
+}
+</script>
+<script>
+function saveOrder(order) {
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.push(order);
+  localStorage.setItem("orders", JSON.stringify(orders));
+}
+
+// مثال عند الضغط على زر "طلب"
+function submitOrder() {
+  const order = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    address: document.getElementById("address").value,
+    status: "قيد المعالجة",
+    date: new Date().toLocaleString()
+  };
+
+  saveOrder(order);
+  alert("تم إرسال الطلب بنجاح");
 }
 </script>
 
