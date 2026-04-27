@@ -168,14 +168,7 @@ window.onload = function() {
     document.getElementById("product").value = product;
   }
 }
-</script>
-<a href="#" class="order-btn" onclick="goOrder(this)">اطلب الآن</a>
 
-<script>
-function goOrder(btn){
-  let product = btn.closest('.product-card').querySelector('h2').innerText;
-  window.location.href = "order.html?product=" + encodeURIComponent(product);
-}
 </script>
 
 </body>
