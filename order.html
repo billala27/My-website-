@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>طلب منتج</title>
+
+<style>
+body {
+  font-family: Cairo, sans-serif;
+  background:#f5f5f5;
+  padding:20px;
+}
+
+.form-box {
+  max-width:400px;
+  margin:auto;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input, select {
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+}
+
+button {
+  width:100%;
+  padding:12px;
+  background:#25D366;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>🛒 إتمام الطلب</h2>
+
+<form onsubmit="send(event)">
+
+<input type="text" id="name" placeholder="الاسم" required>
+
+<input type="tel" id="phone" placeholder="رقم الهاتف" required>
+
+<input type="text" id="state" placeholder="الولاية" required>
+
+<input type="text" id="product" placeholder="اسم المنتج" required>
+
+<button type="submit">إرسال الطلب</button>
+
+</form>
+
+</div>
+
+<script>
+function send(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let state = document.getElementById("state").value;
+  let product = document.getElementById("product").value;
+
+  let msg =
+`🛒 طلب جديد:
+👤 الاسم: ${name}
+📞 الهاتف: ${phone}
+📍 الولاية: ${state}
+📦 المنتج: ${product}`;
+
+  window.open("https://wa.me/213795619382?text=" + encodeURIComponent(msg), "_blank");
+}
+</script>
+
+</body>
+</html>
