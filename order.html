@@ -141,6 +141,13 @@ button:hover {
 </div>
 
 <script>
+<script>
+// جلب اسم المنتج من الرابط
+const params = new URLSearchParams(window.location.search);
+const product = params.get("product");
+
+document.getElementById("productName").innerText = product || "منتج غير محدد";
+
 function send(e){
   e.preventDefault();
 
