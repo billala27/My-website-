@@ -335,3 +335,11 @@ observer.observe(thanks);
     text-align: center;
     margin: 20px 0;
   }
+function openAdmin() {
+  let pass = prompt("أدخل كلمة السر:");
+  if (pass === "🅽🅾🆁 🅷🅾🅱🅸 31") {
+    window.location.href = "admin.html";
+  } else {
+    alert("كلمة السر غير صحيحة ❌");
+  }
+}
