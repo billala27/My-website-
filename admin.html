@@ -199,6 +199,17 @@ document.getElementById("search").addEventListener("input", function(){
 
 render(orders);
 </script>
+<script>
+function openAdmin() {
+  let pass = prompt("أدخل كلمة السر للدخول إلى لوحة التحكم:");
+
+  if(pass === "1234") {
+    window.location.href = "admin.html";
+  } else {
+    alert("كلمة السر غير صحيحة ❌");
+  }
+}
+</script>
 
 </body>
 </html>
