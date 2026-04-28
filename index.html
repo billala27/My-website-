@@ -283,7 +283,144 @@
   AOS.init();<section data-aos="fade-up" data-aos-duration="1000">
 </script>
 <p class="custom-box">شكراً على زيارتك موقعي</p>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+<title>المطور X | متجر أكسسوارات سيارات</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* ===== زر لوحة التحكم الجانبي ===== */
+.side-admin-btn {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: linear-gradient(45deg, #00f5ff, #0066ff);
+  color: white;
+  padding: 12px 10px;
+  border-radius: 12px 0 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0,245,255,0.6);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.side-admin-btn span {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.side-admin-btn:hover span {
+  max-width: 150px;
+  opacity: 1;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- 🔐 زر لوحة التحكم مع حماية -->
+<a class="side-admin-btn" onclick="openAdmin()">
+  ⚙️ <span>لوحة التحكم</span>
+</a>
+
+<div class="background-image"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <img src="images/Store.png" class="logo">
+
+  <h1>مرحبا بكم في متجرنا المتواضع</h1>
+  <p>أفضل مكان لأكسسوارات السيارات</p>
+
+  <a href="tel:0797464694">اتصل الآن</a>
+  <a href="tel:0795619382">اتصل الآن</a>
+  <a href="products.html">رؤية المنتجات</a>
+</header>
+
+<!-- SLIDER -->
+<section class="slider">
+  <div class="slides">
+    <img src="images/slider_car.jpg" class="slide">
+    <img src="images/slider_motor.jpg" class="slide">
+    <img src="images/slider_light.jpg" class="slide">
+  </div>
+</section>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+setInterval(() => {
+  slides.forEach((s,i)=> s.style.display = i===index ? "block":"none");
+  index = (index + 1) % slides.length;
+}, 3000);
+</script>
+
+<!-- MAP -->
+<section>
+<h2>موقعنا الجغرافي</h2>
+<a href="https://www.google.com/maps?q=R5QC%2BC86+Mesra" target="_blank">
+افتح الخريطة
+</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>اتصل بنا</h2>
+
+<form action="https://formspree.io/f/myzwyrjk" method="POST">
+
+<input type="text" name="name" placeholder="الاسم" required>
+<input type="email" name="email" placeholder="البريد" required>
+<input type="tel" name="phone" placeholder="الهاتف" required>
+
+<select name="wilaya" required>
+<option>وهران</option>
+<option>الجزائر</option>
+<option>قسنطينة</option>
+</select>
+
+<textarea name="message" placeholder="رسالتك"></textarea>
+
+<button type="submit">إرسال</button>
+</form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-box">
+<p>© 2025 جميع الحقوق محفوظة</p>
+</footer>
+
+<!-- 🔐 حماية لوحة التحكم -->
+<script>
+function openAdmin() {
+  let pass = prompt("أدخل كلمة السر:");
+
+  if(pass === "1234") {
+    window.location.href = "admin.html";
+  } else {
+    alert("كلمة السر غير صحيحة ❌");
+  }
+}
+</script>
+
+</body>
+</html>
 <style>
   .custom-box {
     display: inline-block;
