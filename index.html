@@ -10,12 +10,24 @@
   <!-- ربط ملف التنسيق -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<button onclick="openAdmin()">دخول لوحة التحكم</button>
+
+  <script>
+  function openAdmin() {
+    let pass = prompt("أدخل كلمة السر للدخول إلى لوحة التحكم:");
+
+    if (pass === "🅽🅾🆁 🅷🅾🅱🅸 31") {
+      window.location.href = "admin.html";
+    } else {
+      alert("كلمة السر غير صحيحة ❌");
+    }
+  }
+  </script>
+</body>
+</html>
   <a href="admin.html" class="side-admin-btn">
   ⚙️ <span>لوحة التحكم</span>
 </a>
-<button onclick="openAdmin()">دخول لوحة التحكم</button>
-
 
   <div class="background-image"></div>
   <!-- هذا الذي سيحمل الصورة -->
@@ -337,11 +349,4 @@ observer.observe(thanks);
     text-align: center;
     margin: 20px 0;
   }
-function openAdmin() {
-  let pass = prompt("أدخل كلمة السر:");
-  if (pass === "🅽🅾🆁 🅷🅾🅱🅸 31") {
-    window.location.href = "admin.html";
-  } else {
-    alert("كلمة السر غير صحيحة ❌");
-  }
-}
+ 
