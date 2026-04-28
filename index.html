@@ -9,8 +9,59 @@
   <link href="https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- ربط ملف التنسيق -->
   <link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+<style>
+    body {
+      font-family: 'Ruwudu', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .fb-neon-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 25px;
+      color: #1877f2;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid #1877f2;
+      border-radius: 12px;
+      box-shadow: 0 0 8px #1877f2,
+                  0 0 20px #1877f2,
+                  0 0 40px #1877f2;
+      transition: 0.3s ease;
+    }
+
+    .fb-neon-btn:hover {
+      background: #1877f2;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #1877f2,
+                  0 0 40px #1877f2,
+                  0 0 80px #1877f2;
+    }
+
+    .custom-box {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: 600;
+      background: #fff;
+      border-radius: 12px;
+      border: 2px dashed #333;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 1s;
+    }
+
+    .custom-box.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 <script>
 function openAdmin() {
   let pass = prompt("أدخل كلمة السر:");
@@ -222,9 +273,9 @@ function openAdmin() {
   <p class="dev">🔹  تم تحديث بواسطة <span>•|🅷ⓐ🅢𝐒Ａ𝗡_ᴬᵁᵀᴼ|•</span>
 <p class="fb">
   📎صفحتنا على الفايسبوك📎: 
-  <a href="https://www.facebook.com/lhsn.shyr" target="_blank" class="fb-btn">
-  <i class="fab fa-facebook-f"></i>
-  اضغط هنا
+ <a href="https://www.facebook.com/lhsn.shyr" target="_blank" class="fb-neon-btn">
+      <i class="fab fa-facebook-f"></i>
+      اضغط هنا
 </a>
 </footer>
 
