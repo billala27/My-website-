@@ -94,7 +94,6 @@ button:hover{
 }
 </style>
 
-
 </head>
 
 <body>
@@ -104,11 +103,16 @@ button:hover{
 
   <div class="product-name" id="productName">...</div>
 
-  <input type="text" id="name" placeholder="اسمك الكامل" required>
-  <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+  <label>👤 الاسم الكامل</label>
+  <input type="text" id="name" required>
 
+  <label>📞 رقم الهاتف</label>
+  <input type="tel" id="phone" required>
+
+  <label>📍 الولاية</label>
   <select id="state" required>
-    <option value="">📍 اختر الولاية</option>
+    <option value="">اختر الولاية</option>
+
     <option>أدرار</option>
     <option>الشلف</option>
     <option>الأغواط</option>
@@ -157,21 +161,31 @@ button:hover{
     <option>عين تموشنت</option>
     <option>غرداية</option>
     <option>غليزان</option>
+    <option>تيميمون</option>
+    <option>برج باجي مختار</option>
+    <option>أولاد جلال</option>
+    <option>بني عباس</option>
+    <option>إن صالح</option>
+    <option>إن قزام</option>
+    <option>تقرت</option>
+    <option>جانت</option>
+    <option>المغير</option>
+    <option>المنيعة</option>
+
   </select>
 
-  <input type="text" id="address" placeholder="العنوان الكامل">
+  <label>🏠 العنوان الكامل</label>
+  <input type="text" id="address">
 
   <button onclick="sendOrder()">تأكيد الطلب</button>
 </div>
 
 <script>
-// جلب اسم المنتج من الرابط
 const params = new URLSearchParams(window.location.search);
 const product = params.get("product");
 
 document.getElementById("productName").innerText = product || "منتج غير محدد";
 
-// إرسال الطلب
 function sendOrder(){
   let name = document.getElementById("name").value;
   let phone = document.getElementById("phone").value;
@@ -190,27 +204,6 @@ function sendOrder(){
   let url = "https://wa.me/213795619382?text=" + encodeURIComponent(message);
 
   window.location.href = url;
-}
-</script>
-<script>
-function saveOrder(order) {
-  let orders = JSON.parse(localStorage.getItem("orders")) || [];
-  orders.push(order);
-  localStorage.setItem("orders", JSON.stringify(orders));
-}
-
-// مثال عند الضغط على زر "طلب"
-function submitOrder() {
-  const order = {
-    name: document.getElementById("name").value,
-    phone: document.getElementById("phone").value,
-    address: document.getElementById("address").value,
-    status: "قيد المعالجة",
-    date: new Date().toLocaleString()
-  };
-
-  saveOrder(order);
-  alert("تم إرسال الطلب بنجاح");
 }
 </script>
 
