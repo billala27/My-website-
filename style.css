@@ -813,3 +813,44 @@ form button:hover {
   box-shadow: 0 0 15px #00ffcc, 0 0 40px #00ffcc, 0 0 60px #00ffcc;
   transform: scale(1.05);
 }
+
+#thanks{
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+
+  /* نيون */
+  text-shadow:
+    0 0 5px #00f0ff,
+    0 0 10px #00f0ff,
+    0 0 20px #00f0ff,
+    0 0 40px #0077ff;
+
+  animation: neonGlow 1.5s infinite alternate;
+}
+
+#thanks.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes neonGlow{
+  from{
+    text-shadow:
+      0 0 5px #00f0ff,
+      0 0 10px #00f0ff,
+      0 0 20px #0077ff;
+  }
+  to{
+    text-shadow:
+      0 0 10px #00f0ff,
+      0 0 20px #00f0ff,
+      0 0 40px #0077ff,
+      0 0 80px #00f0ff;
+  }
+}
