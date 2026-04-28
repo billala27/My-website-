@@ -16,19 +16,32 @@ body {
 
 .logo {
   width: 130px;
-  animation: glowLogo 2s infinite alternate;
+  animation: softGlow 4s infinite linear;
 }
 
-@keyframes glowLogo {
+/* أنيميشن الألوان */
+@keyframes softGlow {
   0% {
-    filter: drop-shadow(0 0 20px #00f7ff)
-        drop-shadow(0 0 40px #00f7ff)
-        drop-shadow(0 0 60px #00f7ff);
+    filter: drop-shadow(0 0 5px #00f7ff);
+  }
+  25% {
+    filter: drop-shadow(0 0 6px #ff00ff);
+  }
+  50% {
+    filter: drop-shadow(0 0 5px #00ff88);
+  }
+  75% {
+    filter: drop-shadow(0 0 6px #ffaa00);
   }
   100% {
-    filter: drop-shadow(0 0 20px #00f7ff)
-            drop-shadow(0 0 40px #00f7ff);
+    filter: drop-shadow(0 0 5px #00f7ff);
   }
+}
+
+/* لمسة صغيرة عند المرور */
+.logo:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 h1 {
