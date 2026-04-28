@@ -295,7 +295,21 @@ const observer = new IntersectionObserver(entries=>{
 });
 
 observer.observe(thanks);
+
+<script>
+const box = document.querySelector(".custom-box");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      box.classList.add("show");
+    }
+  });
+});
+
+observer.observe(box);
 </script>
+
 <style>
   .custom-box {
     display: inline-block;
