@@ -16,29 +16,21 @@ body {
 
 .logo {
   width: 130px;
-  animation: softGlow 4s infinite linear;
+  filter: drop-shadow(0 0 8px #00f7ff);
+  animation: smoothGlow 6s linear infinite;
 }
 
-/* أنيميشن الألوان */
-@keyframes softGlow {
+/* أنيميشن سلس للألوان */
+@keyframes smoothGlow {
   0% {
-    filter: drop-shadow(0 0 5px #00f7ff);
-  }
-  25% {
-    filter: drop-shadow(0 0 6px #ff00ff);
-  }
-  50% {
-    filter: drop-shadow(0 0 5px #00ff88);
-  }
-  75% {
-    filter: drop-shadow(0 0 6px #ffaa00);
+    filter: drop-shadow(0 0 8px #00f7ff) hue-rotate(0deg);
   }
   100% {
-    filter: drop-shadow(0 0 5px #00f7ff);
+    filter: drop-shadow(0 0 8px #00f7ff) hue-rotate(360deg);
   }
 }
 
-/* لمسة صغيرة عند المرور */
+/* تأثير خفيف عند hover */
 .logo:hover {
   transform: scale(1.05);
   transition: 0.3s;
