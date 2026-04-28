@@ -21,8 +21,9 @@ body {
 
 @keyframes glowLogo {
   0% {
-    filter: drop-shadow(0 0 5px #00f7ff)
-            drop-shadow(0 0 10px #00f7ff);
+    filter: drop-shadow(0 0 20px #00f7ff)
+        drop-shadow(0 0 40px #00f7ff)
+        drop-shadow(0 0 60px #00f7ff);
   }
   100% {
     filter: drop-shadow(0 0 20px #00f7ff)
