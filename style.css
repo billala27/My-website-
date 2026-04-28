@@ -15,8 +15,19 @@ body {
 }
 
 .logo {
-  width: 100px;
-  margin-bottom: 10px;
+  width: 130px;
+  animation: glowLogo 2s infinite alternate;
+}
+
+@keyframes glowLogo {
+  0% {
+    filter: drop-shadow(0 0 5px #00f7ff)
+            drop-shadow(0 0 10px #00f7ff);
+  }
+  100% {
+    filter: drop-shadow(0 0 20px #00f7ff)
+            drop-shadow(0 0 40px #00f7ff);
+  }
 }
 
 h1 {
@@ -831,19 +842,4 @@ form button:hover {
   color: #000;
   box-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
   transform: scale(1.05);
-}
-.logo {
-  width: 130px;
-  animation: glowLogo 2s infinite alternate;
-}
-
-@keyframes glowLogo {
-  0% {
-    filter: drop-shadow(0 0 5px #00f7ff)
-            drop-shadow(0 0 10px #00f7ff);
-  }
-  100% {
-    filter: drop-shadow(0 0 20px #00f7ff)
-            drop-shadow(0 0 40px #00f7ff);
-  }
 }
