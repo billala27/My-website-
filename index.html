@@ -282,12 +282,13 @@
 <script>
   AOS.init();<section data-aos="fade-up" data-aos-duration="1000">
 </script>
-<p class="custom-box">شكراً على زيارتك موقعي</p>
+<p class="custom-box" id="thanks">شكراً على زيارتك موقعي</p>
+
 <script>
 const thanks = document.getElementById("thanks");
 
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
     if(entry.isIntersecting){
       thanks.classList.add("show");
     }
@@ -295,22 +296,18 @@ const observer = new IntersectionObserver(entries=>{
 });
 
 observer.observe(thanks);
-
-<script>
-const box = document.querySelector(".custom-box");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      box.classList.add("show");
-    }
-  });
-});
-
-observer.observe(box);
 </script>
-
 <style>
+.custom-box {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1.2s ease;
+}
+
+.custom-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
   .custom-box {
     display: inline-block;
     padding: 12px 24px;
