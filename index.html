@@ -14,17 +14,6 @@
   <a href="admin.html" class="side-admin-btn">
   ⚙️ <span>لوحة التحكم</span>
 </a>
-<script>
-function openAdmin() {
-  let pass = prompt("أدخل كلمة السر للدخول إلى لوحة التحكم:");
-
-  if(pass === 🅽🅾🆁 🅷🅾🅱🅸 31") {
-    window.location.href = "admin.html";
-  } else {
-    alert("كلمة السر غير صحيحة ❌");
-  }
-}
-</script>
 
   <div class="background-image"></div>
   <!-- هذا الذي سيحمل الصورة -->
@@ -296,6 +285,17 @@ function openAdmin() {
 <p class="custom-box" id="thanks">شكراً✨ على زيارتك 🌹موقعي👑</p>
 
 <script>
+<script>
+function openAdmin() {
+  let pass = prompt("أدخل كلمة السر للدخول إلى لوحة التحكم:");
+
+  if(pass === 🅽🅾🆁 🅷🅾🅱🅸 31") {
+    window.location.href = "admin.html";
+  } else {
+    alert("كلمة السر غير صحيحة ❌");
+  }
+}
+</script>
 const thanks = document.getElementById("thanks");
 
 const observer = new IntersectionObserver(entries => {
