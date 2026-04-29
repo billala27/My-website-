@@ -16,7 +16,6 @@ body{
   color:#fff;
 }
 
-/* الكارد */
 .form-container{
   max-width:420px;
   margin:40px auto;
@@ -98,16 +97,6 @@ button:hover{
   transform:scale(1.05);
   box-shadow:0 0 25px #00f7ff, 0 0 35px #ff00ff;
 }
-
-.badge{
-  display:inline-block;
-  background:#ff00ff;
-  padding:5px 10px;
-  border-radius:20px;
-  font-size:12px;
-  margin-bottom:10px;
-  text-align:center;
-}
 </style>
 
 </head>
@@ -119,7 +108,7 @@ button:hover{
 <h2>🛒 إتمام الطلب📤</h2>
 
 <!-- صورة المنتج -->
-<img class="product-img" id="productImg" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="product">
+<img class="product-img" id="productImg" src="" alt="product">
 
 <div class="product-name" id="productName">...</div>
 
@@ -155,19 +144,49 @@ button:hover{
 </div>
 
 <script>
+// 📦 قاعدة بيانات المنتجات
+const products = {
+"لوحة سيارة":"product 1.jpg",
+"jont-Alliage":"product2.jpg",
+"VL-M09":"product3.jpg",
+"مظخم صوت":"product4.jpg",
+"Sony Xplod":"product5.jpg",
+"bass small":"product6.jpg",
+"all":"product7.jpg",
+"wipers":"product8.jpg",
+"مكبر صوت silverton":"product9.jpg",
+"POSTE Radio Sony":"product10.jpg",
+"مكبر صوت ظخم":"product11.jpg",
+"طقم تنظيف":"product12.jpg",
+"السيارة حامل":"حامل سيارة.jpg",
+"Auxilieur Cable":"product13.jpg",
+"CYO (JM)":"product14.jpg",
+"كودوار":"product16.jpg",
+"مطفأة سجار":"product17.jpg",
+"Covre De Vollon":"product18.jpg",
+"Parfume X Lavandre":"product19.jpg",
+"مصابيح LED جميع":"product20.jpg"
+
+};
+
 // 🔥 جلب المنتج من الرابط
 const params = new URLSearchParams(window.location.search);
-const product = params.get("product");
+const productName = params.get("product");
 
-// عرض الاسم
-document.getElementById("productName").innerText = product || "منتج غير محدد";
+// 🏷️ عرض الاسم
+document.getElementById("productName").innerText =
+  productName || "منتج غير محدد";
 
-// (اختياري) لو عندك صورة حسب المنتج لاحقاً
-// document.getElementById("productImg").src = "رابط الصورة";
-</script>
+// 🖼️ عرض الصورة تلقائياً
+const imgEl = document.getElementById("productImg");
 
-<script>
-// إرسال الطلب (تقدر تربطه واتساب أو تيليغرام لاحقاً)
+if(products[productName]){
+  imgEl.src = products[productName];
+} else {
+  imgEl.src = "https://via.placeholder.com/400x300?text=No+Image";
+}
+
+// 📤 إرسال الطلب
 function sendOrder(){
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
@@ -180,7 +199,7 @@ function sendOrder(){
 📞 الهاتف: ${phone}
 📍 الولاية: ${state}
 🏠 العنوان: ${address}
-📦 المنتج: ${product}`;
+📦 المنتج: ${productName}`;
 
   window.open("https://wa.me/213795619382?text=" + encodeURIComponent(msg), "_blank");
 }
