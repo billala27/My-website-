@@ -88,6 +88,12 @@ button{
 <div class="form-container">
   <h2>🛒 إتمام الطلب</h2>
 
+<img class="product-img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="product">
+
+<div class="product-name" id="productName">...</div>
+
+<div class="price">💰 4900 دج</div>
+
   <label>👤 الاسم الكامل</label>
   <input type="text" id="name">
   <div id="nameError" class="alert"></div>
@@ -166,23 +172,7 @@ document.querySelectorAll(".order-btn").forEach(btn => {
   });
 });
 </script>
-// جلب المنتج من الرابط
-const params = new URLSearchParams(window.location.search);
-let product = params.get("product");
 
-if(!product){
-  product = "منتج غير محدد";
-}
-
-document.getElementById("productName").innerText = product;
-
-const img = localStorage.getItem("productImg");
-const productImgEl = document.getElementById("productImg");
-
-if(img && productImgEl){
-  productImgEl.src = img;
-}
-</script>
 // إرسال الطلب
 function sendOrder(){
 
