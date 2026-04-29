@@ -44,11 +44,38 @@ h2{
 
 .product-name{
   text-align:center;
-  color:#ff00ff;
-  margin:10px 0;
   font-size:18px;
+  margin:10px auto;
+
+  display: inline-block;   /* يخليه صغير على قد النص */
+  padding:8px 18px;
+
+  background:#fff;
+  border-radius:12px;
+
+  box-shadow:0 2px 10px rgba(0,0,0,0.15);
 }
 
+/* Gradient داخل النص */
+.product-name span{
+  background: linear-gradient(90deg,#00f7ff,#ff00ff,#00ff88,#00f7ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 .price{
   text-align:center;
   color:#00ff88;
@@ -61,7 +88,7 @@ label{
   margin-top:10px;
   margin-bottom:5px;
   font-size:13px;
-  color:#00f7ff;
+  color:#ffd000;
 }
 
 input,select{
@@ -110,7 +137,9 @@ button:hover{
 <!-- صورة المنتج -->
 <img class="product-img" id="productImg" src="" alt="product">
 
-<div class="product-name" id="productName">...</div>
+<div class="product-name">
+  <span id="productName">...</span>
+</div>
 
 <div class="price">التوصيل جميع الولايات🚚</div>
 
