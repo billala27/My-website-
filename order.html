@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>طلب المنتج</title>
+<title>إتمام الطلب</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
 
@@ -12,41 +12,59 @@ body{
   font-family:'Cairo',sans-serif;
   background: radial-gradient(circle at top,#0f0f1a,#050510,#000);
   margin:0;
+  padding:0;
   color:#fff;
 }
 
-/* box */
+/* الكارد */
 .form-container{
-  max-width:400px;
-  margin:50px auto;
+  max-width:420px;
+  margin:40px auto;
   background: rgba(20,20,35,0.9);
   padding:25px;
-  border-radius:15px;
+  border-radius:18px;
   box-shadow:0 0 25px #00f7ff55, 0 0 60px #ff00ff22;
   border:1px solid rgba(0,247,255,0.3);
+  backdrop-filter: blur(10px);
 }
 
-/* title */
+/* العنوان */
 h2{
   text-align:center;
   color:#00f7ff;
   text-shadow:0 0 10px #00f7ff;
 }
 
-/* product */
-.product-name{
-  background: rgba(255,255,255,0.05);
-  padding:10px;
-  border-radius:8px;
-  text-align:center;
-  margin-bottom:15px;
-  color:#ff00ff;
+/* صورة المنتج */
+.product-img{
+  width:100%;
+  height:200px;
+  border-radius:12px;
+  object-fit:cover;
+  margin-bottom:10px;
+  border:1px solid #00f7ff33;
 }
 
-/* labels */
+/* اسم + سعر */
+.product-name{
+  text-align:center;
+  color:#ff00ff;
+  margin:10px 0;
+  font-size:18px;
+}
+
+.price{
+  text-align:center;
+  color:#00ff88;
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+/* label */
 label{
   display:block;
   margin-top:10px;
+  margin-bottom:5px;
   font-size:13px;
   color:#00f7ff;
 }
@@ -59,56 +77,76 @@ input,select{
   border:1px solid #00f7ff55;
   background: rgba(0,0,0,0.4);
   color:#fff;
-  margin-top:5px;
+  outline:none;
+  font-size:14px;
 }
 
-/* button */
+input:focus,select:focus{
+  border-color:#ff00ff;
+  box-shadow:0 0 10px #ff00ff;
+}
+
+/* زر */
 button{
   width:100%;
   padding:15px;
-  margin-top:20px;
+  margin-top:15px;
   background: linear-gradient(45deg,#00f7ff,#ff00ff);
   border:none;
   color:#fff;
+  font-size:16px;
   border-radius:10px;
   cursor:pointer;
+  transition:0.3s;
 }
 
-/* alert */
-.alert{
-  color:#ff4d4d;
-  font-size:13px;
-  margin-top:5px;
+button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 25px #00f7ff, 0 0 35px #ff00ff;
+}
+
+/* شارة عرض */
+.badge{
+  display:inline-block;
+  background:#ff00ff;
+  padding:5px 10px;
+  border-radius:20px;
+  font-size:12px;
+  margin-bottom:10px;
+  text-align:center;
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="form-container">
 
-  <h2>🛒 إتمام الطلب</h2>
+<h2>🛒 إتمام الطلب</h2>
 
+<div class="badge">🔥 عرض خاص</div>
+
+<!-- صورة المنتج -->
 <img class="product-img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="product">
 
 <div class="product-name" id="productName">...</div>
 
 <div class="price">💰 4900 دج</div>
 
-  <label>👤 الاسم الكامل</label>
-  <input type="text" id="name">
-  <div id="nameError" class="alert"></div>
+<label>👤 الاسم الكامل</label>
+<input type="text" id="name" required>
 
-  <label>📞 رقم الهاتف</label>
-  <input type="tel" id="phone">
-  <div id="phoneError" class="alert"></div>
+<label>📞 رقم الهاتف</label>
+<input type="tel" id="phone" required>
 
-  <label>📍 الولاية</label>
-  <select id="state">
-    <option value="">اختر ولايتك</option>
-  <option>01أدرار</option>
-  <option>02الشلف</option>
-  <option>03الأغواط</option>
+<label>📍 الولاية</label>
+<select id="state" required>
+  <option value="">اختر الولاية</option>
+
+  <option>أدرار</option>
+  <option>الشلف</option>
+  <option>الأغواط</option>
   <option>أم البواقي</option>
   <option>باتنة</option>
   <option>بجاية</option>
@@ -132,95 +170,24 @@ button{
   <option>قالمة</option>
   <option>قسنطينة</option>
   <option>المدية</option>
-  <option>27مستغانم</option>
+  <option>مستغانم</option>
   <option>المسيلة</option>
-  <option>29معسكر</option>
+  <option>معسكر</option>
   <option>ورقلة</option>
-  <option>31وهران</option>
-  <option>البيض</option>
-  <option>إليزي</option>
-  <option>برج بوعريريج</option>
-  <option>بومرداس</option>
-  <option>الطارف</option>
-  <option>تندوف</option>
-  <option>تيسمسيلت</option>
-  <option>الوادي</option>
-  <option>خنشلة</option>
-  <option>سوق أهراس</option>
-  <option>تيبازة</option>
-  <option>ميلة</option>
-  <option>عين الدفلى</option>
-  <option>النعامة</option>
-  <option>عين تموشنت</option>
+  <option>وهران</option>
   <option>غرداية</option>
-  <option>48غليزان</option>
-    <!-- باقي الولايات تبقى كما هي -->
-  </select>
-  <div id="stateError" class="alert"></div>
+  <option>غليزان</option>
+</select>
 
-  <label>🏠 العنوان الكامل</label>
-  <input type="text" id="address">
+<label>🏠 العنوان</label>
+<input type="text" id="address">
 
-  <button onclick="sendOrder()">تأكيد الطلب</button>
+<button onclick="sendOrder()">🚀 تأكيد الطلب الآن</button>
+
 </div>
 
 <script>
+const params = new URLSearchParams(window.location.search);
+const product = params.get("product");
 
-document.querySelectorAll(".order-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    localStorage.setItem("productImg", btn.dataset.img);
-    window.location.href = "order.html";
-  });
-});
-
-</script>
-
-// إرسال الطلب
-function sendOrder(){
-
-  let name = document.getElementById("name").value.trim();
-  let phone = document.getElementById("phone").value.trim();
-  let state = document.getElementById("state").value;
-  let address = document.getElementById("address").value.trim();
-
-  // reset errors
-  document.getElementById("nameError").innerText = "";
-  document.getElementById("phoneError").innerText = "";
-  document.getElementById("stateError").innerText = "";
-
-  let hasError = false;
-
-  if(name === ""){
-    document.getElementById("nameError").innerText = "⚠️ أدخل اسمك";
-    hasError = true;
-  }
-
-  if(phone === "" || phone.length < 8){
-    document.getElementById("phoneError").innerText = "⚠️ رقم❌ غير صحيح";
-    hasError = true;
-  }
-
-  if(state === ""){
-    document.getElementById("stateError").innerText = "⚠️ اختر الولاية";
-    hasError = true;
-  }
-
-  if(hasError) return;
-
-  let message =
-`طلب جديد 🔥
-
-🛒 المنتج: ${product}
-👤 الاسم: ${name}
-📞 الهاتف: ${phone}
-📍 الولاية: ${state}
-🏠 العنوان: ${address}`;
-
-  let url = "https://wa.me/213795619382?text=" + encodeURIComponent(message);
-
-  window.location.href = url;
-}
-</script>
-
-</body>
-</html>
+document.getElementById("productName").innerText = product || "منت
