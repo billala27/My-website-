@@ -123,9 +123,7 @@ button:hover{
 
 <div class="form-container">
 
-<h2>🛒 إتمام الطلب</h2>
-
-<div class="badge">🔥 عرض خاص</div>
+<h2>🛒 إتمام الطلب📤</h2>
 
 <!-- صورة المنتج -->
 <img class="product-img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="product">
@@ -182,7 +180,7 @@ button:hover{
 <label>🏠 العنوان</label>
 <input type="text" id="address">
 
-<button onclick="sendOrder()">🚀 تأكيد الطلب الآن</button>
+<button onclick="sendOrder()">🛃تأكيد الطلب الآن</button>
 
 </div>
 
@@ -190,4 +188,4 @@ button:hover{
 const params = new URLSearchParams(window.location.search);
 const product = params.get("product");
 
-document.getElementById("productName").innerText = product || "منت
+document.getElementById("productName").innerText = product || "منتج
