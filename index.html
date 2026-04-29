@@ -12,6 +12,56 @@
 <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <style>
+
+/* 🔥 select نيون */
+.select-wrapper{
+  position:relative;
+}
+
+.select-wrapper select{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #00f7ff;
+  background:#000;
+  color:#00f7ff;
+  font-size:14px;
+  outline:none;
+  appearance:none;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 0 10px rgba(0,247,255,0.3);
+}
+
+/* hover */
+.select-wrapper select:hover{
+  box-shadow:
+    0 0 10px #00f7ff,
+    0 0 20px #00f7ff;
+}
+
+/* focus */
+.select-wrapper select:focus{
+  border-color:#ff00ff;
+  box-shadow:
+    0 0 10px #ff00ff,
+    0 0 25px #ff00ff,
+    0 0 40px #ff00ff;
+}
+
+/* السهم النيون */
+.select-wrapper::after{
+  content:"▼";
+  position:absolute;
+  left:12px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#00f7ff;
+  text-shadow:
+    0 0 5px #00f7ff,
+    0 0 15px #00f7ff;
+  pointer-events:none;
+}
     body {
       font-family: 'Ruwudu', sans-serif;
       margin: 0;
@@ -207,70 +257,71 @@ function openAdmin() {
 <input type="tel" id="phone" name="phone" placeholder="0𝟓𝐗𝐗𝐗𝐗𝐗𝐗𝐗𝐗" required style="width: 100%; padding: 10px; margin: 5px 0;"><br>
 
 <label for="ولاية">الولاية:</label><br>
-<select id="ولاية" name="ولاية" required style="width: 100%; padding: 10px; margin: 5px 0;">
-  <select name="wilaya" required>
-  <option value="">اختر ولايتك</option>
 
-  <option value="01">01 - أدرار</option>
-  <option value="02">02 - الشلف</option>
-  <option value="03">03 - الأغواط</option>
-  <option value="04">04 - أم البواقي</option>
-  <option value="05">05 - باتنة</option>
-  <option value="06">06 - بجاية</option>
-  <option value="07">07 - بسكرة</option>
-  <option value="08">08 - بشار</option>
-  <option value="09">09 - البليدة</option>
-  <option value="10">10 - البويرة</option>
-  <option value="11">11 - تمنراست</option>
-  <option value="12">12 - تبسة</option>
-  <option value="13">13 - تلمسان</option>
-  <option value="14">14 - تيارت</option>
-  <option value="15">15 - تيزي وزو</option>
-  <option value="16">16 - الجزائر</option>
-  <option value="17">17 - الجلفة</option>
-  <option value="18">18 - جيجل</option>
-  <option value="19">19 - سطيف</option>
-  <option value="20">20 - سعيدة</option>
-  <option value="21">21 - سكيكدة</option>
-  <option value="22">22 - سيدي بلعباس</option>
-  <option value="23">23 - عنابة</option>
-  <option value="24">24 - قالمة</option>
-  <option value="25">25 - قسنطينة</option>
-  <option value="26">26 - المدية</option>
-  <option value="27">27 - مستغانم</option>
-  <option value="28">28 - المسيلة</option>
-  <option value="29">29 - معسكر</option>
-  <option value="30">30 - ورقلة</option>
-  <option value="31">31 - وهران</option>
-  <option value="32">32 - البيض</option>
-  <option value="33">33 - إليزي</option>
-  <option value="34">34 - برج بوعريريج</option>
-  <option value="35">35 - بومرداس</option>
-  <option value="36">36 - الطارف</option>
-  <option value="37">37 - تندوف</option>
-  <option value="38">38 - تيسمسيلت</option>
-  <option value="39">39 - الوادي</option>
-  <option value="40">40 - خنشلة</option>
-  <option value="41">41 - سوق أهراس</option>
-  <option value="42">42 - تيبازة</option>
-  <option value="43">43 - ميلة</option>
-  <option value="44">44 - عين الدفلى</option>
-  <option value="45">45 - النعامة</option>
-  <option value="46">46 - عين تموشنت</option>
-  <option value="47">47 - غرداية</option>
-  <option value="48">48 - غليزان</option>
-  <option value="49">49 - تيميمون</option>
-  <option value="50">50 - برج باجي مختار</option>
-  <option value="51">51 - أولاد جلال</option>
-  <option value="52">52 - بني عباس</option>
-  <option value="53">53 - عين صالح</option>
-  <option value="54">54 - عين قزام</option>
-  <option value="55">55 - تقرت</option>
-  <option value="56">56 - جانت</option>
-  <option value="57">57 - المغير</option>
-  <option value="58">58 - المنيعة</option>
+<div class="select-wrapper">
+  <select id="wilaya" name="wilaya" required>
+    <option value="">اختر ولايتك</option>
 
-</select>
+    <option value="01">01 - أدرار</option>
+    <option value="02">02 - الشلف</option>
+    <option value="03">03 - الأغواط</option>
+    <option value="04">04 - أم البواقي</option>
+    <option value="05">05 - باتنة</option>
+    <option value="06">06 - بجاية</option>
+    <option value="07">07 - بسكرة</option>
+    <option value="08">08 - بشار</option>
+    <option value="09">09 - البليدة</option>
+    <option value="10">10 - البويرة</option>
+    <option value="11">11 - تمنراست</option>
+    <option value="12">12 - تبسة</option>
+    <option value="13">13 - تلمسان</option>
+    <option value="14">14 - تيارت</option>
+    <option value="15">15 - تيزي وزو</option>
+    <option value="16">16 - الجزائر</option>
+    <option value="17">17 - الجلفة</option>
+    <option value="18">18 - جيجل</option>
+    <option value="19">19 - سطيف</option>
+    <option value="20">20 - سعيدة</option>
+    <option value="21">21 - سكيكدة</option>
+    <option value="22">22 - سيدي بلعباس</option>
+    <option value="23">23 - عنابة</option>
+    <option value="24">24 - قالمة</option>
+    <option value="25">25 - قسنطينة</option>
+    <option value="26">26 - المدية</option>
+    <option value="27">27 - مستغانم</option>
+    <option value="28">28 - المسيلة</option>
+    <option value="29">29 - معسكر</option>
+    <option value="30">30 - ورقلة</option>
+    <option value="31">31 - وهران</option>
+    <option value="32">32 - البيض</option>
+    <option value="33">33 - إليزي</option>
+    <option value="34">34 - برج بوعريريج</option>
+    <option value="35">35 - بومرداس</option>
+    <option value="36">36 - الطارف</option>
+    <option value="37">37 - تندوف</option>
+    <option value="38">38 - تيسمسيلت</option>
+    <option value="39">39 - الوادي</option>
+    <option value="40">40 - خنشلة</option>
+    <option value="41">41 - سوق أهراس</option>
+    <option value="42">42 - تيبازة</option>
+    <option value="43">43 - ميلة</option>
+    <option value="44">44 - عين الدفلى</option>
+    <option value="45">45 - النعامة</option>
+    <option value="46">46 - عين تموشنت</option>
+    <option value="47">47 - غرداية</option>
+    <option value="48">48 - غليزان</option>
+    <option value="49">49 - تيميمون</option>
+    <option value="50">50 - برج باجي مختار</option>
+    <option value="51">51 - أولاد جلال</option>
+    <option value="52">52 - بني عباس</option>
+    <option value="53">53 - عين صالح</option>
+    <option value="54">54 - عين قزام</option>
+    <option value="55">55 - تقرت</option>
+    <option value="56">56 - جانت</option>
+    <option value="57">57 - المغير</option>
+    <option value="58">58 - المنيعة</option>
+  </select>
+</div>
 
   <label for="message">أكتب رسالة📝:</label><br>
   <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." rows="5" required style="width: 100%; padding: 10px; margin: 5px 0;"></textarea><br>
