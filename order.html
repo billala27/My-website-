@@ -88,10 +88,6 @@ button{
 <div class="form-container">
   <h2>🛒 إتمام الطلب</h2>
 
--- صورة المنتج -->
-
-<img class="product-img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="product">
- 
  <div class="product-name" id="productName">...</div>
 
   <label>👤 الاسم الكامل</label>
@@ -164,6 +160,22 @@ button{
 </div>
 
 <script>
+<script>
+<img id="productImg" class="product-img" src="" alt="product">
+
+<script>
+const img = localStorage.getItem("productImg");
+if(img){
+  document.getElementById("productImg").src = img;
+}
+</script>
+document.querySelectorAll(".order-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    localStorage.setItem("productImg", btn.dataset.img);
+    window.location.href = "order.html";
+  });
+});
+</script>
 // جلب المنتج من الرابط
 const params = new URLSearchParams(window.location.search);
 let product = params.get("product");
