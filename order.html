@@ -43,20 +43,21 @@ h2{
 }
 
 .product-name{
-  text-align:center;
-  font-size:18px;
+  display: block;
+  width: fit-content;
   margin:10px auto;
 
-  display: inline-block;   /* يخليه صغير على قد النص */
-  padding:8px 18px;
+  font-size:18px;
 
+  padding:8px 18px;
   background:#fff;
   border-radius:12px;
 
   box-shadow:0 2px 10px rgba(0,0,0,0.15);
+  text-align:center;
 }
 
-/* Gradient داخل النص */
+/* Gradient للنص داخل span */
 .product-name span{
   background: linear-gradient(90deg,#00f7ff,#ff00ff,#00ff88,#00f7ff);
   background-size: 300% 300%;
@@ -65,17 +66,13 @@ h2{
   animation: gradientMove 4s ease infinite;
 }
 
+/* الحركة */
 @keyframes gradientMove{
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
 }
 
-@keyframes gradientMove{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
 .price{
   text-align:center;
   color:#00ff88;
@@ -134,7 +131,6 @@ button:hover{
 
 <h2>🛒 إتمام الطلب📤</h2>
 
-<!-- صورة المنتج -->
 <img class="product-img" id="productImg" src="" alt="product">
 
 <div class="product-name">
@@ -190,7 +186,7 @@ const products = {
   "السيارة حامل": "حامل سيارة.jpg",
   "Auxilieur Cable": "product13.jpg",
   "CYO (JM)": "product14.jpg",
-"(إكسسوار زينة مختلفة(شعار": " product15.jpg", 
+  "(إكسسوار زينة مختلفة(شعار": "product15.jpg",
   "كودوار": "product16.jpg",
   "مطفأة سجار": "product17.jpg",
   "Covre De Vollon": "product18.jpg",
@@ -221,15 +217,15 @@ const products = {
   "ملصقات": "product43.png"
 };
 
-// 🔥 جلب المنتج من الرابط
+// 🔥 جلب المنتج
 const params = new URLSearchParams(window.location.search);
 const productName = params.get("product");
 
 // 🏷️ عرض الاسم
 document.getElementById("productName").innerText =
-  productName || "منتج غير محدد";
+  productName ? productName : "منتج غير محدد";
 
-// 🖼️ عرض الصورة تلقائياً
+// 🖼️ الصورة
 const imgEl = document.getElementById("productImg");
 
 if(products[productName]){
@@ -244,6 +240,11 @@ function sendOrder(){
   const phone = document.getElementById("phone").value;
   const state = document.getElementById("state").value;
   const address = document.getElementById("address").value;
+
+  if(!name || !phone || !state){
+    alert("يرجى ملء الاسم والهاتف والولاية");
+    return;
+  }
 
   const msg =
 `🛒 طلب جديد:
