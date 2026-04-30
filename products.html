@@ -24,71 +24,23 @@ body {
   display: inline-block;
 
   background: linear-gradient(90deg, #ff00ff, #00f7ff, #ffd700, #ff00ff);
-  background-size: 300% 300%;
+  background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   animation: neonWave 4s ease-in-out infinite;
 
-  /* 💡 Glow احترافي ومتوازن */
   text-shadow:
-    0 0 6px rgba(0, 247, 255, 0.7),
-    0 0 12px rgba(0, 247, 255, 0.5),
-    0 0 24px rgba(255, 0, 255, 0.4),
-    0 0 40px rgba(255, 215, 0, 0.3);
-
-  will-change: background-position;
+    0 0 5px #00f7ff,
+    0 0 10px #00f7ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ffd700;
 }
 
-/* 🌊 حركة ناعمة للنص */
 @keyframes neonWave {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* ⚡ برق أنظف وأخف (بدون مشاكل layout) */
-.neon-title::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 60%;
-  height: 100%;
-
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.8),
-    transparent
-  );
-
-  transform: skewX(-25deg);
-  animation: lightning 3.5s infinite;
-  pointer-events: none;
-}
-
-@keyframes lightning {
-  0% {
-    transform: translateX(-150%) skewX(-25deg);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  60% {
-    transform: translateX(150%) skewX(-25deg);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% {background-position: 0%;}
+  50% {background-position: 100%;}
+  100% {background-position: 0%;}
 }
 
 .grid-container {
