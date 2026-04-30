@@ -17,7 +17,6 @@ body {
 }
 
 .neon-title {
- 
   font-size: 40px;
   font-weight: bold;
   position: relative;
@@ -48,7 +47,6 @@ body {
 /* ⚡ برق بدون تحريك layout */
 .neon-title::after {
   content: "";
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -62,17 +60,12 @@ body {
     rgba(255,255,255,0.8),
     transparent
   );
-  
 
   transform: translateX(-150%) skewX(-25deg);
   animation: lightning 3s infinite;
   pointer-events: none;
 }
-text-shadow:
-  0 0 5px rgba(0,255,255,0.6),
-  0 0 15px rgba(0,255,255,0.5),
-  0 0 30px rgba(255,0,255,0.4),
-  0 0 60px rgba(255,215,0,0.3);
+
 /* 🌊 نيون ناعم */
 @keyframes neonWave {
   0% { background-position: 0% }
