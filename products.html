@@ -25,7 +25,6 @@ body {
   border-radius: 18px;
   letter-spacing: 1.5px;
 
-  /* 🌈 النص */
   background: linear-gradient(
     90deg,
     #ff4d6d,
@@ -48,16 +47,18 @@ body {
   text-shadow:
     0 0 6px rgba(0,0,0,0.10),
     0 0 10px rgba(0,180,255,0.15);
+
+  z-index: 1;
 }
 
-/* 🔥 بوردر غليظ جدًا */
+/* 🔥 إطار نيون */
 .neon-title::before {
   content: "";
   position: absolute;
-  inset: -16px; /* ⬅️ زدت المسافة باش يولي إطار كبير */
+  inset: -16px;
   border-radius: 22px;
 
-  border: 5px solid transparent; /* ⬅️ غليظ أكثر */
+  border: 5px solid transparent;
 
   background: linear-gradient(
     90deg,
@@ -70,14 +71,12 @@ body {
   -webkit-mask:
     linear-gradient(#000 0 0) padding-box,
     linear-gradient(#000 0 0);
-
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 
   z-index: 0;
   pointer-events: none;
 
-  /* ✨ Glow أقوى باش يبان فخم */
   box-shadow:
     0 0 18px rgba(0,200,255,0.3),
     0 0 35px rgba(255,80,150,0.25),
@@ -86,56 +85,64 @@ body {
 
 /* 🎬 حركة النص */
 @keyframes textFlow {
-  0% { background-position: 0% }
-  50% { background-position: 100% }
-  100% { background-position: 0% }
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
 }
 
-./* إطار نيون */
-.product-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 15px;
-    padding: 2px;
-    background: linear-gradient(45deg,#00f0ff,#ff00f7,#00ff88,#00f0ff);
-    background-size: 300%;
-    animation: neonBorder 6s linear infinite;
+/* 🧩 Product Card */
+.product-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
 
-    -webkit-mask:
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
+/* إطار نيون */
+.product-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(45deg,#00f0ff,#ff00f7,#00ff88,#00f0ff);
+  background-size: 300%;
+  animation: neonBorder 6s linear infinite;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
 }
 
 /* حركة النيون */
 @keyframes neonBorder {
-    0% { background-position: 0% }
-    100% { background-position: 300% }
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
 }
 
 /* Hover */
 .product-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 0 20px #00f0ff, 0 0 40px #ff00f7;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 20px #00f0ff, 0 0 40px #ff00f7;
 }
 
-
 .info {
-    padding: 15px;
+  padding: 15px;
 }
 
 .info h2 {
-    color: #0072ff;
-    font-size: 18px;
+  color: #0072ff;
+  font-size: 18px;
 }
 
 .info p {
-    font-size: 14px;
-    color: #666;
+  font-size: 14px;
+  color: #666;
 }
-
 .order-btn {
     display: inline-block;
     position: relative;
