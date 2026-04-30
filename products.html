@@ -55,39 +55,33 @@ body {
 .neon-title::before {
   content: "";
   position: absolute;
-  inset: -16px;
+  inset: 0;
+  padding: 6px;
   border-radius: 22px;
-
-  border: 5px solid transparent;
 
   background: linear-gradient(
     90deg,
-    rgba(255,77,109,0.9),
-    rgba(255,159,28,0.85),
-    rgba(78,205,196,0.85),
-    rgba(155,93,229,0.85)
-  ) border-box;
+    #ff4d6d,
+    #ff9f1c,
+    #4ecdc4,
+    #9b5de5,
+    #ff4d6d
+  );
+  background-size: 300% 300%;
+  animation: textFlow 7s ease-in-out infinite;
 
-  -webkit-mask:
-    linear-gradient(#000 0 0) padding-box,
+  /* الحل الصحيح للـ border */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
 
-  box-shadow:
-    0 0 18px rgba(0,200,255,0.3),
-    0 0 35px rgba(255,80,150,0.25),
-    0 0 60px rgba(155,93,229,0.15);
-}
-
-/* 🎬 حركة النص */
-@keyframes textFlow {
-  0% { background-position: 0%; }
-  50% { background-position: 100%; }
-  100% { background-position: 0%; }
+  filter: blur(3px);
+  opacity: 0.9;
 }
 
 /* 🧩 Product Card */
