@@ -17,7 +17,7 @@ body {
 }
 
 /* neon */
-..neon-title {
+.neon-title {
   font-size: 40px;
   font-weight: bold;
   position: relative;
@@ -30,16 +30,26 @@ body {
 
   animation: neonWave 4s ease-in-out infinite;
 
-  /* 💡 هنا الـ GLOW */
   text-shadow:
     0 0 5px #00f7ff,
     0 0 10px #00f7ff,
     0 0 20px #ff00ff,
     0 0 40px #ffd700;
-
-  will-change: background-position, transform;
 }
 
+@keyframes neonWave {
+  0% {background-position: 0%;}
+  50% {background-position: 100%;}
+  100% {background-position: 0%;}
+}
+
+/* GRID */
+.grid-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:15px;
+    margin-top:20px;
+}
 .contact-btn:hover {
   transform: scale(1.1);
 }
