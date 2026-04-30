@@ -320,6 +320,26 @@ body {
 <a href="https://wa.me/213795619382?text=أريد هذا المنتج" target="_blank" class="contact-btn">
 📩 اتصل بنا
 </a>
+<script>
+document.querySelectorAll('.order-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
 
+        let ripple = document.createElement('span');
+
+        let rect = this.getBoundingClientRect();
+        let size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+
+        ripple.classList.add('ripple');
+
+        this.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600);
+    });
+});
+</script>
 </body>
 </html>
