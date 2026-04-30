@@ -17,70 +17,78 @@ body {
 }
 
 /* neon */
-.order-btn {
-    display: inline-block;
-    position: relative;
-    padding: 11px 20px;
-    margin-top: 10px;
-    color: #fff;
-    background: #e60023;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 12px;
-    overflow: hidden;
-    border: none;
-    cursor: pointer;
+.neon-title {
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
 
-    box-shadow: 0 0 10px rgba(230,0,35,0.6),
-                0 4px 12px rgba(230,0,35,0.3);
+  background: linear-gradient(90deg, #ff00ff, #00f7ff, #ffd700, #ff00ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-    animation: pulse 2s infinite, glow 2s infinite;
-    transition: transform 0.2s ease;
+  animation: neonWave 4s ease-in-out infinite;
+
+  /* 💡 Glow احترافي ومتوازن */
+  text-shadow:
+    0 0 6px rgba(0, 247, 255, 0.7),
+    0 0 12px rgba(0, 247, 255, 0.5),
+    0 0 24px rgba(255, 0, 255, 0.4),
+    0 0 40px rgba(255, 215, 0, 0.3);
+
+  will-change: background-position;
 }
 
-/* نبض */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+/* 🌊 حركة ناعمة للنص */
+@keyframes neonWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/* Glow (إضاءة) */
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 5px rgba(230,0,35,0.4),
-                    0 4px 12px rgba(230,0,35,0.3);
-    }
-    50% {
-        box-shadow: 0 0 25px rgba(230,0,35,0.9),
-                    0 0 40px rgba(230,0,35,0.5);
-    }
-    100% {
-        box-shadow: 0 0 5px rgba(230,0,35,0.4),
-                    0 4px 12px rgba(230,0,35,0.3);
-    }
+/* ⚡ برق أنظف وأخف (بدون مشاكل layout) */
+.neon-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.8),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+  animation: lightning 3.5s infinite;
+  pointer-events: none;
 }
 
-/* ضغط */
-.order-btn:active {
-    transform: scale(0.95);
-}
-
-/* Ripple */
-.order-btn span {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.5);
-    transform: scale(0);
-    animation: ripple 0.6s linear;
-    pointer-events: none;
-}
-
-@keyframes ripple {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
+@keyframes lightning {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(150%) skewX(-25deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .grid-container {
