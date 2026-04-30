@@ -17,15 +17,14 @@ body {
 }
 
 .neon-title {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 750;
   position: relative;
   display: inline-block;
-  padding: 16px 34px;
-  border-radius: 18px;
-  letter-spacing: 1.5px;
+  padding: 10px 22px;
+  border-radius: 14px;
+  letter-spacing: 1px;
 
-  /* 🌈 النص */
   background: linear-gradient(
     90deg,
     #ff4d6d,
@@ -37,51 +36,52 @@ body {
     #ff4d6d
   );
 
-  background-size: 250%;
+  background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  animation: textFlow 7s ease-in-out infinite;
+  animation: textFlow 6s ease-in-out infinite, glowPulse 2.5s ease-in-out infinite;
 
-  -webkit-text-stroke: 0.6px rgba(0,0,0,0.15);
+  -webkit-text-stroke: 0.4px rgba(0,0,0,0.12);
 
   text-shadow:
-    0 0 6px rgba(0,0,0,0.10),
+    0 0 6px rgba(0,0,0,0.08),
     0 0 10px rgba(0,180,255,0.15);
 }
 
-/* 🔥 بوردر غليظ جدًا */
+/* 🔥 إطار متحرك */
 .neon-title::before {
   content: "";
   position: absolute;
-  inset: -16px; /* ⬅️ زدت المسافة باش يولي إطار كبير */
-  border-radius: 22px;
-
-  border: 5px solid transparent; /* ⬅️ غليظ أكثر */
+  inset: -10px;
+  border-radius: 18px;
+  padding: 3px;
 
   background: linear-gradient(
-    90deg,
-    rgba(255,77,109,0.9),
-    rgba(255,159,28,0.85),
-    rgba(78,205,196,0.85),
-    rgba(155,93,229,0.85)
-  ) border-box;
+    120deg,
+    #ff4d6d,
+    #ff9f1c,
+    #4ecdc4,
+    #5fa8d3,
+    #9b5de5,
+    #ff4d6d
+  );
+
+  background-size: 300%;
+  animation: borderMove 4s linear infinite;
 
   -webkit-mask:
-    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
-
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 
   z-index: 0;
   pointer-events: none;
 
-  /* ✨ Glow أقوى باش يبان فخم */
   box-shadow:
-    0 0 18px rgba(0,200,255,0.3),
-    0 0 35px rgba(255,80,150,0.25),
-    0 0 60px rgba(155,93,229,0.15);
+    0 0 12px rgba(0,200,255,0.25),
+    0 0 25px rgba(255,80,150,0.2);
 }
 
 /* 🎬 حركة النص */
@@ -89,6 +89,22 @@ body {
   0% { background-position: 0% }
   50% { background-position: 100% }
   100% { background-position: 0% }
+}
+
+/* ✨ glow نابض */
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(0,200,255,0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(255,80,150,0.35));
+  }
+}
+
+/* 🔄 حركة الإطار */
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 .grid-container {
