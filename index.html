@@ -122,7 +122,23 @@ function openAdmin() {
     alert("كلمة السر غير صحيحة ❌");
   }
 }
+
+<script>
+const text = "مرحبا بكم في متجرنا المتواضع";
+let i = 0;
+const speed = 100;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", typeWriter);
 </script>
+
 <body>
   <button class="neon-btn" onclick="openAdmin()">دخول لوحة التحكم</button>
 
@@ -132,7 +148,8 @@ function openAdmin() {
 </header>
   <header class="hero">
     <img src="images/Store.png" alt="شعار الموقع" class="logo" />
-    <h1 class="main-title">مرحبا بكم في متجرنا المتواضع</h1>
+
+    <h1 class="main-title" id="typing"></h1>
    <p>أفضل مكان لشراء لوازم وأكسسوارات السيارات</p>
 
    <a href="tel:0797464694" class="call-btn">
