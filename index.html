@@ -134,33 +134,35 @@ function openAdmin() {
   <header class="hero">
     <img src="images/Store.png" alt="شعار الموقع" class="logo" />
 <!-- النص تحت الصورة مباشرة -->
-  <h1 class="main-title">
-    <span id="typing"></span><span class="cursor"></span>
-  </h1>
-</header>
+    <h1 class="main-title">
+      <span id="typing"></span><span class="cursor"></span>
+    </h1>
 
-<script>
-const text = "مرحبا بكم في متجرنا المتواضع";
-let i = 0;
-const speed = 100;
+    <p>أفضل مكان لشراء لوازم وأكسسوارات السيارات</p>
 
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("typing").textContent += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
+  </header>
 
-window.addEventListener("DOMContentLoaded", typeWriter);
+  <script>
+    const text = "مرحبا بكم في متجرنا المتواضع";
+    let i = 0;
+    const speed = 100;
 
-</script>
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", typeWriter);
+  </script>
 
 </body>
+
 </html>
 
-   <p>أفضل مكان لشراء لوازم وأكسسوارات السيارات</p>
-
+   
    <a href="tel:0797464694" class="call-btn">
     اتصل الآن📲: 0797464694
   </a>
