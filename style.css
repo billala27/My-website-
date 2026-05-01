@@ -271,3 +271,9 @@ form button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
 }
+
+.main-title {
+  color: #ff7b00;
+  font-size: 2.5em;
+  animation: glowText 3s infinite alternate;
+}
