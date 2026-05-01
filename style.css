@@ -57,13 +57,13 @@ body {
   animation: glowText 3s infinite alternate;
 }
 
+h1 {
+  animation: glowText 3s infinite alternate;
+}
+
 @keyframes glowText {
-  from {
-    text-shadow: 0 0 5px #ff7b00;
-  }
-  to {
-    text-shadow: 0 0 20px #ff7b00, 0 0 30px #ffae42;
-  }
+  from { text-shadow: 0 0 5px #ff7b00; }
+  to   { text-shadow: 0 0 20px #ff7b00, 0 0 30px #ffae42; }
 }
 
 /* ================== SLIDER ================== */
