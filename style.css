@@ -57,9 +57,7 @@ body {
   animation: glowText 3s infinite alternate;
 }
 
-h1 {
-  animation: glowText 3s infinite alternate;
-}
+<h1 id="typing"></h1>
 
 @keyframes glowText {
   from { text-shadow: 0 0 5px #ff7b00; }
