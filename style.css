@@ -6,10 +6,10 @@ body {
   background: #f9f9f9;
   color: #333;
   text-align: center;
-
   animation: fadeInPage 1s ease;
 }
 
+/* دخول الصفحة */
 @keyframes fadeInPage {
   from {
     opacity: 0;
@@ -37,6 +37,11 @@ body {
   transition: 0.3s;
 }
 
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Glow logo */
 @keyframes logoGlow {
   0%   { filter: drop-shadow(0 0 6px #00f7ff); }
   25%  { filter: drop-shadow(0 0 6px #ff00ff); }
@@ -45,12 +50,8 @@ body {
   100% { filter: drop-shadow(0 0 6px #00f7ff); }
 }
 
-.logo:hover {
-  transform: scale(1.05);
-}
-
 /* ================== TITLE ================== */
-h1 {
+.main-title {
   color: #ff7b00;
   font-size: 2.5em;
   animation: glowText 3s infinite alternate;
@@ -138,8 +139,6 @@ form button:hover {
   border: 2px solid #6c757d;
   transition: 0.3s;
   box-shadow: 0 0 10px #6c757d, 0 0 20px #6c757d;
-
-  /* نبض */
   animation: pulse 2s infinite;
 }
 
@@ -154,17 +153,17 @@ form button:hover {
   background: #fff;
   color: #000;
   box-shadow: 0 0 20px #fff, 0 0 40px #fff;
-
-  /* اهتزاز */
   animation: shake 0.4s;
 }
 
+/* نبض */
 @keyframes pulse {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.05); }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
 
+/* اهتزاز */
 @keyframes shake {
   0% { transform: translateX(0); }
   25% { transform: translateX(-3px); }
@@ -270,10 +269,4 @@ form button:hover {
   color: #000;
   transform: scale(1.05);
   box-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
-}
-
-.main-title {
-  color: #ff7b00;
-  font-size: 2.5em;
-  animation: glowText 3s infinite alternate;
 }
