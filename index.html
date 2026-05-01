@@ -133,7 +133,27 @@ function openAdmin() {
 </header>
   <header class="hero">
     <img src="images/Store.png" alt="شعار الموقع" class="logo" />
+<!-- النص تحت الصورة مباشرة -->
+  <h1 class="main-title">
+    <span id="typing"></span><span class="cursor"></span>
+  </h1>
+</header>
 
+<script>
+const text = "مرحبا بكم في متجرنا المتواضع";
+let i = 0;
+const speed = 100;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typing").textContent += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", typeWriter);
+</script>
    <p>أفضل مكان لشراء لوازم وأكسسوارات السيارات</p>
 
    <a href="tel:0797464694" class="call-btn">
