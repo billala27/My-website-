@@ -129,26 +129,6 @@ function openAdmin() {
 
   <div class="background-image"></div>
   <!-- هذا الذي سيحمل الصورة -->
-</script>
-<h1 class="main-title">
-  <span id="typing"></span><span class="cursor"></span>
-</h1>
-
-<script>
-const text = "مرحبا بكم في متجرنا المتواضع";
-let i = 0;
-const speed = 100;
-
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("typing").textContent += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-
-window.addEventListener("DOMContentLoaded", typeWriter);
-</script>
 
 </header>
   <header class="hero">
