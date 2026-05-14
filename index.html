@@ -1,469 +1,443 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>المطور X | متجر أكسسوارات سيارات</title><!-- ربط الخط الجميل من Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- ربط ملف التنسيق -->
-  <link rel="stylesheet" href="style.css" />
-<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<style>
+<!𝘿𝙊𝘾𝙏𝙔𝙋𝙀 𝙝𝙩𝙢𝙡>
+<𝙝𝙩𝙢𝙡 𝙡𝙖𝙣𝙜="𝙖𝙧" 𝙙𝙞𝙧="𝙧𝙩𝙡">
+<𝙝𝙚𝙖𝙙>
+  <𝙢𝙚𝙩𝙖 𝙘𝙝𝙖𝙧𝙨𝙚𝙩="𝙐𝙏𝙁-8" />
+  <𝙢𝙚𝙩𝙖 𝙣𝙖𝙢𝙚="𝙫𝙞𝙚𝙬𝙥𝙤𝙧𝙩" 𝙘𝙤𝙣𝙩𝙚𝙣𝙩="𝙬𝙞𝙙𝙩𝙝=𝙙𝙚𝙫𝙞𝙘𝙚-𝙬𝙞𝙙𝙩𝙝, 𝙞𝙣𝙞𝙩𝙞𝙖𝙡-𝙨𝙘𝙖𝙡𝙚=1.0"/>
+  <𝙩𝙞𝙩𝙡𝙚>المطور 𝙓 | متجر أكسسوارات سيارات</𝙩𝙞𝙩𝙡𝙚>
 
-/* 🔥 select نيون */
-.select-wrapper{
-  position:relative;
+  <!-- الخطوط -->
+  <𝙡𝙞𝙣𝙠 𝙧𝙚𝙡="𝙥𝙧𝙚𝙘𝙤𝙣𝙣𝙚𝙘𝙩" 𝙝𝙧𝙚𝙛="𝙝𝙩𝙩𝙥𝙨://𝙛𝙤𝙣𝙩𝙨.𝙜𝙤𝙤𝙜𝙡𝙚𝙖𝙥𝙞𝙨.𝙘𝙤𝙢">
+  <𝙡𝙞𝙣𝙠 𝙧𝙚𝙡="𝙥𝙧𝙚𝙘𝙤𝙣𝙣𝙚𝙘𝙩" 𝙝𝙧𝙚𝙛="𝙝𝙩𝙩𝙥𝙨://𝙛𝙤𝙣𝙩𝙨.𝙜𝙨𝙩𝙖𝙩𝙞𝙘.𝙘𝙤𝙢" 𝙘𝙧𝙤𝙨𝙨𝙤𝙧𝙞𝙜𝙞𝙣>
+
+  <𝙡𝙞𝙣𝙠 𝙝𝙧𝙚𝙛="𝙝𝙩𝙩𝙥𝙨://𝙛𝙤𝙣𝙩𝙨.𝙜𝙤𝙤𝙜𝙡𝙚𝙖𝙥𝙞𝙨.𝙘𝙤𝙢/𝙘𝙨𝙨2?𝙛𝙖𝙢𝙞𝙡𝙮=𝙍𝙪𝙬𝙪𝙙𝙪:𝙬𝙜𝙝𝙩@400;500;600;700&𝙙𝙞𝙨𝙥𝙡𝙖𝙮=𝙨𝙬𝙖𝙥" 𝙧𝙚𝙡="𝙨𝙩𝙮𝙡𝙚𝙨𝙝𝙚𝙚𝙩">
+  <𝙡𝙞𝙣𝙠 𝙝𝙧𝙚𝙛="𝙝𝙩𝙩𝙥𝙨://𝙛𝙤𝙣𝙩𝙨.𝙜𝙤𝙤𝙜𝙡𝙚𝙖𝙥𝙞𝙨.𝙘𝙤𝙢/𝙘𝙨𝙨2?𝙛𝙖𝙢𝙞𝙡𝙮=𝘾𝙖𝙞𝙧𝙤:𝙬𝙜𝙝𝙩@600&𝙙𝙞𝙨𝙥𝙡𝙖𝙮=𝙨𝙬𝙖𝙥" 𝙧𝙚𝙡="𝙨𝙩𝙮𝙡𝙚𝙨𝙝𝙚𝙚𝙩">
+  <𝙡𝙞𝙣𝙠 𝙝𝙧𝙚𝙛="𝙝𝙩𝙩𝙥𝙨://𝙛𝙤𝙣𝙩𝙨.𝙜𝙤𝙤𝙜𝙡𝙚𝙖𝙥𝙞𝙨.𝙘𝙤𝙢/𝙘𝙨𝙨2?𝙛𝙖𝙢𝙞𝙡𝙮=𝙈𝙖𝙙𝙖:𝙬𝙜𝙝𝙩@200..900&𝙙𝙞𝙨𝙥𝙡𝙖𝙮=𝙨𝙬𝙖𝙥" 𝙧𝙚𝙡="𝙨𝙩𝙮𝙡𝙚𝙨𝙝𝙚𝙚𝙩">
+
+  <!-- 𝘾𝙎𝙎 -->
+  <𝙡𝙞𝙣𝙠 𝙧𝙚𝙡="𝙨𝙩𝙮𝙡𝙚𝙨𝙝𝙚𝙚𝙩" 𝙝𝙧𝙚𝙛="𝙨𝙩𝙮𝙡𝙚.𝙘𝙨𝙨" />
+
+  <!-- 𝙁𝙤𝙣𝙩 𝘼𝙬𝙚𝙨𝙤𝙢𝙚 -->
+  <𝙡𝙞𝙣𝙠 𝙧𝙚𝙡="𝙨𝙩𝙮𝙡𝙚𝙨𝙝𝙚𝙚𝙩" 𝙝𝙧𝙚𝙛="𝙝𝙩𝙩𝙥𝙨://𝙘𝙙𝙣𝙟𝙨.𝙘𝙡𝙤𝙪𝙙𝙛𝙡𝙖𝙧𝙚.𝙘𝙤𝙢/𝙖𝙟𝙖𝙭/𝙡𝙞𝙗𝙨/𝙛𝙤𝙣𝙩-𝙖𝙬𝙚𝙨𝙤𝙢𝙚/6.5.0/𝙘𝙨𝙨/𝙖𝙡𝙡.𝙢𝙞𝙣.𝙘𝙨𝙨">
+
+  <!-- 𝘼𝙊𝙎 -->
+  <𝙡𝙞𝙣𝙠 𝙝𝙧𝙚𝙛="𝙝𝙩𝙩𝙥𝙨://𝙪𝙣𝙥𝙠𝙜.𝙘𝙤𝙢/𝙖𝙤𝙨@2.3.1/𝙙𝙞𝙨𝙩/𝙖𝙤𝙨.𝙘𝙨𝙨" 𝙧𝙚𝙡="𝙨𝙩𝙮𝙡𝙚𝙨𝙝𝙚𝙚𝙩">
+
+<𝙨𝙩𝙮𝙡𝙚>
+
+/* 🔥 𝙨𝙚𝙡𝙚𝙘𝙩 نيون */
+.𝙨𝙚𝙡𝙚𝙘𝙩-𝙬𝙧𝙖𝙥𝙥𝙚𝙧{
+  𝙥𝙤𝙨𝙞𝙩𝙞𝙤𝙣:𝙧𝙚𝙡𝙖𝙩𝙞𝙫𝙚;
 }
 
-.select-wrapper select{
-  width:100%;
-  padding:12px;
-  border-radius:12px;
-  border:1px solid #00f7ff;
-  background:#000;
-  color:#00f7ff;
-  font-size:14px;
-  outline:none;
-  appearance:none;
-  cursor:pointer;
-  transition:0.3s;
-  box-shadow:0 0 10px rgba(0,247,255,0.3);
+.𝙨𝙚𝙡𝙚𝙘𝙩-𝙬𝙧𝙖𝙥𝙥𝙚𝙧 𝙨𝙚𝙡𝙚𝙘𝙩{
+  𝙬𝙞𝙙𝙩𝙝:100%;
+  𝙥𝙖𝙙𝙙𝙞𝙣𝙜:12𝙥𝙭;
+  𝙗𝙤𝙧𝙙𝙚𝙧-𝙧𝙖𝙙𝙞𝙪𝙨:12𝙥𝙭;
+  𝙗𝙤𝙧𝙙𝙚𝙧:1𝙥𝙭 𝙨𝙤𝙡𝙞𝙙 #00𝙛7𝙛𝙛;
+  𝙗𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙:#000;
+  𝙘𝙤𝙡𝙤𝙧:#00𝙛7𝙛𝙛;
+  𝙛𝙤𝙣𝙩-𝙨𝙞𝙯𝙚:14𝙥𝙭;
+  𝙤𝙪𝙩𝙡𝙞𝙣𝙚:𝙣𝙤𝙣𝙚;
+  𝙖𝙥𝙥𝙚𝙖𝙧𝙖𝙣𝙘𝙚:𝙣𝙤𝙣𝙚;
+  𝙘𝙪𝙧𝙨𝙤𝙧:𝙥𝙤𝙞𝙣𝙩𝙚𝙧;
+  𝙩𝙧𝙖𝙣𝙨𝙞𝙩𝙞𝙤𝙣:0.3𝙨;
+  𝙗𝙤𝙭-𝙨𝙝𝙖𝙙𝙤𝙬:0 0 10𝙥𝙭 𝙧𝙜𝙗𝙖(0,247,255,0.3);
 }
 
-/* hover */
-.select-wrapper select:hover{
-  box-shadow:
-    0 0 10px #00f7ff,
-    0 0 20px #00f7ff;
+/* 𝙝𝙤𝙫𝙚𝙧 */
+.𝙨𝙚𝙡𝙚𝙘𝙩-𝙬𝙧𝙖𝙥𝙥𝙚𝙧 𝙨𝙚𝙡𝙚𝙘𝙩:𝙝𝙤𝙫𝙚𝙧{
+  𝙗𝙤𝙭-𝙨𝙝𝙖𝙙𝙤𝙬:
+    0 0 10𝙥𝙭 #00𝙛7𝙛𝙛,
+    0 0 20𝙥𝙭 #00𝙛7𝙛𝙛;
 }
 
-/* focus */
-.select-wrapper select:focus{
-  border-color:#ff00ff;
-  box-shadow:
-    0 0 10px #ff00ff,
-    0 0 25px #ff00ff,
-    0 0 40px #ff00ff;
+/* 𝙛𝙤𝙘𝙪𝙨 */
+.𝙨𝙚𝙡𝙚𝙘𝙩-𝙬𝙧𝙖𝙥𝙥𝙚𝙧 𝙨𝙚𝙡𝙚𝙘𝙩:𝙛𝙤𝙘𝙪𝙨{
+  𝙗𝙤𝙧𝙙𝙚𝙧-𝙘𝙤𝙡𝙤𝙧:#𝙛𝙛00𝙛𝙛;
+  𝙗𝙤𝙭-𝙨𝙝𝙖𝙙𝙤𝙬:
+    0 0 10𝙥𝙭 #𝙛𝙛00𝙛𝙛,
+    0 0 25𝙥𝙭 #𝙛𝙛00𝙛𝙛,
+    0 0 40𝙥𝙭 #𝙛𝙛00𝙛𝙛;
 }
 
 /* السهم النيون */
-.select-wrapper::after{
-  content:"▼";
-  position:absolute;
-  left:12px;
-  top:50%;
-  transform:translateY(-50%);
-  color:#00f7ff;
-  text-shadow:
-    0 0 5px #00f7ff,
-    0 0 15px #00f7ff;
-  pointer-events:none;
+.𝙨𝙚𝙡𝙚𝙘𝙩-𝙬𝙧𝙖𝙥𝙥𝙚𝙧::𝙖𝙛𝙩𝙚𝙧{
+  𝙘𝙤𝙣𝙩𝙚𝙣𝙩:"▼";
+  𝙥𝙤𝙨𝙞𝙩𝙞𝙤𝙣:𝙖𝙗𝙨𝙤𝙡𝙪𝙩𝙚;
+  𝙡𝙚𝙛𝙩:12𝙥𝙭;
+  𝙩𝙤𝙥:50%;
+  𝙩𝙧𝙖𝙣𝙨𝙛𝙤𝙧𝙢:𝙩𝙧𝙖𝙣𝙨𝙡𝙖𝙩𝙚𝙔(-50%);
+  𝙘𝙤𝙡𝙤𝙧:#00𝙛7𝙛𝙛;
+  𝙩𝙚𝙭𝙩-𝙨𝙝𝙖𝙙𝙤𝙬:
+    0 0 5𝙥𝙭 #00𝙛7𝙛𝙛,
+    0 0 15𝙥𝙭 #00𝙛7𝙛𝙛;
+  𝙥𝙤𝙞𝙣𝙩𝙚𝙧-𝙚𝙫𝙚𝙣𝙩𝙨:𝙣𝙤𝙣𝙚;
 }
-    body {
-      font-family: 'Ruwudu', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
 
-    .fb-neon-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 25px;
-      color: #1877f2;
-      font-weight: bold;
-      text-decoration: none;
-      border: 2px solid #1877f2;
-      border-radius: 12px;
-      box-shadow: 0 0 8px #1877f2,
-                  0 0 20px #1877f2,
-                  0 0 40px #1877f2;
-      transition: 0.3s ease;
-    }
+𝙗𝙤𝙙𝙮 {
+  𝙛𝙤𝙣𝙩-𝙛𝙖𝙢𝙞𝙡𝙮: '𝙍𝙪𝙬𝙪𝙙𝙪', 𝙨𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛;
+  𝙢𝙖𝙧𝙜𝙞𝙣: 0;
+  𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 0;
+}
 
-    .fb-neon-btn:hover {
-      background: #1877f2;
-      color: white;
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #1877f2,
-                  0 0 40px #1877f2,
-                  0 0 80px #1877f2;
-    }
+.𝙛𝙗-𝙣𝙚𝙤𝙣-𝙗𝙩𝙣 {
+  𝙙𝙞𝙨𝙥𝙡𝙖𝙮: 𝙞𝙣𝙡𝙞𝙣𝙚-𝙛𝙡𝙚𝙭;
+  𝙖𝙡𝙞𝙜𝙣-𝙞𝙩𝙚𝙢𝙨: 𝙘𝙚𝙣𝙩𝙚𝙧;
+  𝙜𝙖𝙥: 10𝙥𝙭;
+  𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 12𝙥𝙭 25𝙥𝙭;
+  𝙘𝙤𝙡𝙤𝙧: #1877𝙛2;
+  𝙛𝙤𝙣𝙩-𝙬𝙚𝙞𝙜𝙝𝙩: 𝙗𝙤𝙡𝙙;
+  𝙩𝙚𝙭𝙩-𝙙𝙚𝙘𝙤𝙧𝙖𝙩𝙞𝙤𝙣: 𝙣𝙤𝙣𝙚;
+  𝙗𝙤𝙧𝙙𝙚𝙧: 2𝙥𝙭 𝙨𝙤𝙡𝙞𝙙 #1877𝙛2;
+  𝙗𝙤𝙧𝙙𝙚𝙧-𝙧𝙖𝙙𝙞𝙪𝙨: 12𝙥𝙭;
+  𝙗𝙤𝙭-𝙨𝙝𝙖𝙙𝙤𝙬: 0 0 8𝙥𝙭 #1877𝙛2,
+              0 0 20𝙥𝙭 #1877𝙛2,
+              0 0 40𝙥𝙭 #1877𝙛2;
+  𝙩𝙧𝙖𝙣𝙨𝙞𝙩𝙞𝙤𝙣: 0.3𝙨 𝙚𝙖𝙨𝙚;
+}
 
-    .custom-box {
-      display: inline-block;
-      padding: 12px 24px;
-      font-size: 18px;
-      font-weight: 600;
-      background: #fff;
-      border-radius: 12px;
-      border: 2px dashed #333;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      opacity: 0;
-      transform: translateY(50px);
-      transition: 1s;
-    }
+.𝙛𝙗-𝙣𝙚𝙤𝙣-𝙗𝙩𝙣:𝙝𝙤𝙫𝙚𝙧 {
+  𝙗𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙: #1877𝙛2;
+  𝙘𝙤𝙡𝙤𝙧: 𝙬𝙝𝙞𝙩𝙚;
+  𝙩𝙧𝙖𝙣𝙨𝙛𝙤𝙧𝙢: 𝙨𝙘𝙖𝙡𝙚(1.05);
+  𝙗𝙤𝙭-𝙨𝙝𝙖𝙙𝙤𝙬: 0 0 15𝙥𝙭 #1877𝙛2,
+              0 0 40𝙥𝙭 #1877𝙛2,
+              0 0 80𝙥𝙭 #1877𝙛2;
+}
 
-    .custom-box.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-<script>
-function openAdmin() {
-  let pass = prompt("أدخل كلمة السر:");
+.𝙘𝙪𝙨𝙩𝙤𝙢-𝙗𝙤𝙭 {
+  𝙙𝙞𝙨𝙥𝙡𝙖𝙮: 𝙞𝙣𝙡𝙞𝙣𝙚-𝙗𝙡𝙤𝙘𝙠;
+  𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 12𝙥𝙭 24𝙥𝙭;
+  𝙛𝙤𝙣𝙩-𝙨𝙞𝙯𝙚: 18𝙥𝙭;
+  𝙛𝙤𝙣𝙩-𝙬𝙚𝙞𝙜𝙝𝙩: 600;
+  𝙗𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙: #𝙛𝙛𝙛;
+  𝙗𝙤𝙧𝙙𝙚𝙧-𝙧𝙖𝙙𝙞𝙪𝙨: 12𝙥𝙭;
+  𝙗𝙤𝙧𝙙𝙚𝙧: 2𝙥𝙭 𝙙𝙖𝙨𝙝𝙚𝙙 #333;
+  𝙗𝙤𝙭-𝙨𝙝𝙖𝙙𝙤𝙬: 0 4𝙥𝙭 10𝙥𝙭 𝙧𝙜𝙗𝙖(0,0,0,0.25);
+  𝙤𝙥𝙖𝙘𝙞𝙩𝙮: 0;
+  𝙩𝙧𝙖𝙣𝙨𝙛𝙤𝙧𝙢: 𝙩𝙧𝙖𝙣𝙨𝙡𝙖𝙩𝙚𝙔(50𝙥𝙭);
+  𝙩𝙧𝙖𝙣𝙨𝙞𝙩𝙞𝙤𝙣: 1𝙨;
+}
 
-  if (pass === "🅽🅾🆁 🅷🅾🅱🅸 31") {
-    window.location.href = "admin.html";
-  } else {
-    alert("كلمة السر غير صحيحة ❌");
+.𝙘𝙪𝙨𝙩𝙤𝙢-𝙗𝙤𝙭.𝙨𝙝𝙤𝙬 {
+  𝙤𝙥𝙖𝙘𝙞𝙩𝙮: 1;
+  𝙩𝙧𝙖𝙣𝙨𝙛𝙤𝙧𝙢: 𝙩𝙧𝙖𝙣𝙨𝙡𝙖𝙩𝙚𝙔(0);
+}
+
+.𝙛𝙤𝙤𝙩𝙚𝙧-𝙗𝙤𝙭 {
+  𝙩𝙚𝙭𝙩-𝙖𝙡𝙞𝙜𝙣: 𝙘𝙚𝙣𝙩𝙚𝙧;
+  𝙗𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙: #111;
+  𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 25𝙥𝙭 15𝙥𝙭;
+  𝙘𝙤𝙡𝙤𝙧: #𝙚𝙚𝙚;
+  𝙛𝙤𝙣𝙩-𝙛𝙖𝙢𝙞𝙡𝙮: "𝙏𝙖𝙝𝙤𝙢𝙖", 𝙨𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛;
+  𝙗𝙤𝙧𝙙𝙚𝙧-𝙩𝙤𝙥: 2𝙥𝙭 𝙨𝙤𝙡𝙞𝙙 #00𝙙4𝙛𝙛;
+}
+
+.𝙛𝙤𝙤𝙩𝙚𝙧-𝙗𝙤𝙭 .𝙧𝙞𝙜𝙝𝙩𝙨 {
+  𝙛𝙤𝙣𝙩-𝙨𝙞𝙯𝙚: 15𝙥𝙭;
+  𝙢𝙖𝙧𝙜𝙞𝙣: 0 0 8𝙥𝙭;
+  𝙤𝙥𝙖𝙘𝙞𝙩𝙮: 0.9;
+}
+
+.𝙛𝙤𝙤𝙩𝙚𝙧-𝙗𝙤𝙭 .𝙙𝙚𝙫 {
+  𝙛𝙤𝙣𝙩-𝙨𝙞𝙯𝙚: 17𝙥𝙭;
+  𝙛𝙤𝙣𝙩-𝙬𝙚𝙞𝙜𝙝𝙩: 600;
+  𝙢𝙖𝙧𝙜𝙞𝙣: 0 0 10𝙥𝙭;
+}
+
+.𝙛𝙤𝙤𝙩𝙚𝙧-𝙗𝙤𝙭 .𝙙𝙚𝙫 𝙨𝙥𝙖𝙣 {
+  𝙘𝙤𝙡𝙤𝙧: #00𝙙4𝙛𝙛;
+  𝙛𝙤𝙣𝙩-𝙬𝙚𝙞𝙜𝙝𝙩: 𝙗𝙤𝙡𝙙;
+}
+
+.𝙗𝙞𝙡𝙖𝙡-𝙩𝙚𝙘𝙝 {
+  𝙙𝙞𝙨𝙥𝙡𝙖𝙮: 𝙞𝙣𝙡𝙞𝙣𝙚-𝙗𝙡𝙤𝙘𝙠;
+  𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 14𝙥𝙭 28𝙥𝙭;
+  𝙛𝙤𝙣𝙩-𝙨𝙞𝙯𝙚: 22𝙥𝙭;
+  𝙛𝙤𝙣𝙩-𝙬𝙚𝙞𝙜𝙝𝙩: 𝙗𝙤𝙡𝙙;
+  𝙘𝙤𝙡𝙤𝙧: #𝙛𝙛𝙛;
+  𝙗𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙: #0𝙘1𝙗2𝙖;
+  𝙗𝙤𝙧𝙙𝙚𝙧-𝙧𝙖𝙙𝙞𝙪𝙨: 12𝙥𝙭;
+  𝙗𝙤𝙭-𝙨𝙝𝙖𝙙𝙤𝙬: 0 4𝙥𝙭 12𝙥𝙭 𝙧𝙜𝙗𝙖(0, 255, 255, 0.35);
+  𝙩𝙚𝙭𝙩-𝙖𝙡𝙞𝙜𝙣: 𝙘𝙚𝙣𝙩𝙚𝙧;
+  𝙩𝙚𝙭𝙩-𝙩𝙧𝙖𝙣𝙨𝙛𝙤𝙧𝙢: 𝙪𝙥𝙥𝙚𝙧𝙘𝙖𝙨𝙚;
+  𝙡𝙚𝙩𝙩𝙚𝙧-𝙨𝙥𝙖𝙘𝙞𝙣𝙜: 1𝙥𝙭;
+  𝙛𝙤𝙣𝙩-𝙛𝙖𝙢𝙞𝙡𝙮: 𝘼𝙧𝙞𝙖𝙡, 𝙨𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛;
+}
+
+</𝙨𝙩𝙮𝙡𝙚>
+
+<𝙨𝙘𝙧𝙞𝙥𝙩>
+𝙛𝙪𝙣𝙘𝙩𝙞𝙤𝙣 𝙤𝙥𝙚𝙣𝘼𝙙𝙢𝙞𝙣() {
+  𝙡𝙚𝙩 𝙥𝙖𝙨𝙨 = 𝙥𝙧𝙤𝙢𝙥𝙩("أدخل كلمة السر:");
+
+  𝙞𝙛 (𝙥𝙖𝙨𝙨 === "🅽🅾🆁 🅷🅾🅱🅸 31") {
+    𝙬𝙞𝙣𝙙𝙤𝙬.𝙡𝙤𝙘𝙖𝙩𝙞𝙤𝙣.𝙝𝙧𝙚𝙛 = "𝙖𝙙𝙢𝙞𝙣.𝙝𝙩𝙢𝙡";
+  } 𝙚𝙡𝙨𝙚 {
+    𝙖𝙡𝙚𝙧𝙩("كلمة السر غير صحيحة ❌");
   }
 }
+</𝙨𝙘𝙧𝙞𝙥𝙩>
 
-</script>
-<body>
-  <button class="neon-btn" onclick="openAdmin()">دخول لوحة التحكم</button>
+</𝙝𝙚𝙖𝙙>
 
+<𝙗𝙤𝙙𝙮>
 
-  <div class="background-image"></div>
-  <!-- هذا الذي سيحمل الصورة -->
-</header>
-  <header class="hero">
-    <img src="images/Store.png" alt="شعار الموقع" class="logo" />
-<!-- النص تحت الصورة مباشرة -->
-    <h1 class="main-title">
-      <span id="typing"></span><span class="cursor"></span>
-    </h1>
+<𝙗𝙪𝙩𝙩𝙤𝙣 𝙘𝙡𝙖𝙨𝙨="𝙣𝙚𝙤𝙣-𝙗𝙩𝙣" 𝙤𝙣𝙘𝙡𝙞𝙘𝙠="𝙤𝙥𝙚𝙣𝘼𝙙𝙢𝙞𝙣()">دخول لوحة التحكم</𝙗𝙪𝙩𝙩𝙤𝙣>
 
-    <p>أفضل مكان لشراء لوازم وأكسسوارات السيارات</p>
+<𝙙𝙞𝙫 𝙘𝙡𝙖𝙨𝙨="𝙗𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙-𝙞𝙢𝙖𝙜𝙚"></𝙙𝙞𝙫>
 
-  </header>
+<𝙝𝙚𝙖𝙙𝙚𝙧 𝙘𝙡𝙖𝙨𝙨="𝙝𝙚𝙧𝙤">
 
-  <script>
-    const text = "مرحبا بكم في متجرنا المتواضع";
-    let i = 0;
-    const speed = 100;
+  <𝙞𝙢𝙜 𝙨𝙧𝙘="𝙞𝙢𝙖𝙜𝙚𝙨/𝙎𝙩𝙤𝙧𝙚.𝙥𝙣𝙜" 𝙖𝙡𝙩="شعار الموقع" 𝙘𝙡𝙖𝙨𝙨="𝙡𝙤𝙜𝙤" />
 
-    function typeWriter() {
-      if (i < text.length) {
-        document.getElementById("typing").textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
+  <𝙝1 𝙘𝙡𝙖𝙨𝙨="𝙢𝙖𝙞𝙣-𝙩𝙞𝙩𝙡𝙚">
+    <𝙨𝙥𝙖𝙣 𝙞𝙙="𝙩𝙮𝙥𝙞𝙣𝙜"></𝙨𝙥𝙖𝙣><𝙨𝙥𝙖𝙣 𝙘𝙡𝙖𝙨𝙨="𝙘𝙪𝙧𝙨𝙤𝙧"></𝙨𝙥𝙖𝙣>
+  </𝙝1>
 
-    window.addEventListener("DOMContentLoaded", typeWriter);
-  </script>
+  <𝙥>أفضل مكان لشراء لوازم وأكسسوارات السيارات</𝙥>
 
-</body>
-
-</html>
-
-   
-   <a href="tel:0797464694" class="call-btn">
+  <!-- أزرار الاتصال -->
+  <𝙖 𝙝𝙧𝙚𝙛="𝙩𝙚𝙡:0797464694" 𝙘𝙡𝙖𝙨𝙨="𝙘𝙖𝙡𝙡-𝙗𝙩𝙣">
     اتصل الآن📲: 0797464694
-  </a>
+  </𝙖>
 
-  <a href="tel:0795619382" class="call-btn green">
+  <𝙖 𝙝𝙧𝙚𝙛="𝙩𝙚𝙡:0795619382" 𝙘𝙡𝙖𝙨𝙨="𝙘𝙖𝙡𝙡-𝙗𝙩𝙣 𝙜𝙧𝙚𝙚𝙣">
     اتصل الآن📲: 0795619382
-  </a>
-    <!-- زر رؤية المنتجات -->
-<a <!-- ربط الخط من Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+  </𝙖>
 
-<a href="products.html" style="
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    font-family: 'Cairo', sans-serif;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease;">
+  <!-- زر المنتجات -->
+  <𝙖 𝙝𝙧𝙚𝙛="𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙨.𝙝𝙩𝙢𝙡" 𝙨𝙩𝙮𝙡𝙚="
+    𝙙𝙞𝙨𝙥𝙡𝙖𝙮: 𝙞𝙣𝙡𝙞𝙣𝙚-𝙗𝙡𝙤𝙘𝙠;
+    𝙢𝙖𝙧𝙜𝙞𝙣-𝙩𝙤𝙥: 15𝙥𝙭;
+    𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 12𝙥𝙭 25𝙥𝙭;
+    𝙗𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙: 𝙡𝙞𝙣𝙚𝙖𝙧-𝙜𝙧𝙖𝙙𝙞𝙚𝙣𝙩(135𝙙𝙚𝙜, #00𝙘6𝙛𝙛, #0072𝙛𝙛);
+    𝙘𝙤𝙡𝙤𝙧: 𝙬𝙝𝙞𝙩𝙚;
+    𝙗𝙤𝙧𝙙𝙚𝙧-𝙧𝙖𝙙𝙞𝙪𝙨: 12𝙥𝙭;
+    𝙩𝙚𝙭𝙩-𝙙𝙚𝙘𝙤𝙧𝙖𝙩𝙞𝙤𝙣: 𝙣𝙤𝙣𝙚;
+    𝙛𝙤𝙣𝙩-𝙬𝙚𝙞𝙜𝙝𝙩: 600;
+    𝙛𝙤𝙣𝙩-𝙛𝙖𝙢𝙞𝙡𝙮: '𝘾𝙖𝙞𝙧𝙤', 𝙨𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛;
+    𝙗𝙤𝙭-𝙨𝙝𝙖𝙙𝙤𝙬: 0 6𝙥𝙭 12𝙥𝙭 𝙧𝙜𝙗𝙖(0, 0, 0, 0.15);
+    𝙩𝙧𝙖𝙣𝙨𝙞𝙩𝙞𝙤𝙣: 𝙩𝙧𝙖𝙣𝙨𝙛𝙤𝙧𝙢 0.2𝙨 𝙚𝙖𝙨𝙚;">
     رؤية المنتجات🛍
-  </a>
-  
-  </header>
+  </𝙖>
 
-  <section class="slider">
-    <div class="slides">
-      <img src="images/slider_car.jpg" class="slide" alt="car">
-      <img src="images/slider_motor.jpg" class="slide" alt="motor">
-      <img src="images/slider_light.jpg" class="slide" alt="light">
-      <img src="images/slider_bass.jpg"
-        class="slide" alt="bass">
-        <img src="images/slider_0mpli.jpg"
-        class="slide" alt="Ompli">
-        
-    </div>
-  </section>
+</𝙝𝙚𝙖𝙙𝙚𝙧>
 
+<𝙨𝙚𝙘𝙩𝙞𝙤𝙣 𝙘𝙡𝙖𝙨𝙨="𝙨𝙡𝙞𝙙𝙚𝙧">
+  <𝙙𝙞𝙫 𝙘𝙡𝙖𝙨𝙨="𝙨𝙡𝙞𝙙𝙚𝙨">
+    <𝙞𝙢𝙜 𝙨𝙧𝙘="𝙞𝙢𝙖𝙜𝙚𝙨/𝙨𝙡𝙞𝙙𝙚𝙧_𝙘𝙖𝙧.𝙟𝙥𝙜" 𝙘𝙡𝙖𝙨𝙨="𝙨𝙡𝙞𝙙𝙚" 𝙖𝙡𝙩="𝙘𝙖𝙧">
+    <𝙞𝙢𝙜 𝙨𝙧𝙘="𝙞𝙢𝙖𝙜𝙚𝙨/𝙨𝙡𝙞𝙙𝙚𝙧_𝙢𝙤𝙩𝙤𝙧.𝙟𝙥𝙜" 𝙘𝙡𝙖𝙨𝙨="𝙨𝙡𝙞𝙙𝙚" 𝙖𝙡𝙩="𝙢𝙤𝙩𝙤𝙧">
+    <𝙞𝙢𝙜 𝙨𝙧𝙘="𝙞𝙢𝙖𝙜𝙚𝙨/𝙨𝙡𝙞𝙙𝙚𝙧_𝙡𝙞𝙜𝙝𝙩.𝙟𝙥𝙜" 𝙘𝙡𝙖𝙨𝙨="𝙨𝙡𝙞𝙙𝙚" 𝙖𝙡𝙩="𝙡𝙞𝙜𝙝𝙩">
+    <𝙞𝙢𝙜 𝙨𝙧𝙘="𝙞𝙢𝙖𝙜𝙚𝙨/𝙨𝙡𝙞𝙙𝙚𝙧_𝙗𝙖𝙨𝙨.𝙟𝙥𝙜" 𝙘𝙡𝙖𝙨𝙨="𝙨𝙡𝙞𝙙𝙚" 𝙖𝙡𝙩="𝙗𝙖𝙨𝙨">
+    <𝙞𝙢𝙜 𝙨𝙧𝙘="𝙞𝙢𝙖𝙜𝙚𝙨/𝙨𝙡𝙞𝙙𝙚𝙧_0𝙢𝙥𝙡𝙞.𝙟𝙥𝙜" 𝙘𝙡𝙖𝙨𝙨="𝙨𝙡𝙞𝙙𝙚" 𝙖𝙡𝙩="𝙊𝙢𝙥𝙡𝙞">
+  </𝙙𝙞𝙫>
+</𝙨𝙚𝙘𝙩𝙞𝙤𝙣>
 
-  <script>
-    let index = 0;
-    const slides = document.querySelectorAll('.slide');
-    setInterval(() => {
-      slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
-      });
-      index = (index + 1) % slides.length;
-    }, 3000);
-  </script>
-</body>
+<𝙝2>موقعنا الجغرافي 🗾</𝙝2>
 
-  <h2>موقعنا الجغرافي 🗾</h2>
+<𝙖 𝙝𝙧𝙚𝙛="𝙝𝙩𝙩𝙥𝙨://𝙬𝙬𝙬.𝙜𝙤𝙤𝙜𝙡𝙚.𝙘𝙤𝙢/𝙢𝙖𝙥𝙨?𝙦=𝙍5𝙌𝘾%2𝘽𝘾86+𝙈𝙚𝙨𝙧𝙖" 𝙩𝙖𝙧𝙜𝙚𝙩="_𝙗𝙡𝙖𝙣𝙠" 𝙨𝙩𝙮𝙡𝙚="
+  𝙙𝙞𝙨𝙥𝙡𝙖𝙮: 𝙞𝙣𝙡𝙞𝙣𝙚-𝙛𝙡𝙚𝙭;
+  𝙖𝙡𝙞𝙜𝙣-𝙞𝙩𝙚𝙢𝙨: 𝙘𝙚𝙣𝙩𝙚𝙧;
+  𝙜𝙖𝙥: 10𝙥𝙭;
+  𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 12𝙥𝙭 25𝙥𝙭;
+  𝙗𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙-𝙘𝙤𝙡𝙤𝙧: #17𝙖2𝙗8;
+  𝙘𝙤𝙡𝙤𝙧: 𝙬𝙝𝙞𝙩𝙚;
+  𝙗𝙤𝙧𝙙𝙚𝙧-𝙧𝙖𝙙𝙞𝙪𝙨: 12𝙥𝙭;
+  𝙩𝙚𝙭𝙩-𝙙𝙚𝙘𝙤𝙧𝙖𝙩𝙞𝙤𝙣: 𝙣𝙤𝙣𝙚;
+  𝙛𝙤𝙣𝙩-𝙬𝙚𝙞𝙜𝙝𝙩: 𝙗𝙤𝙡𝙙;
+  𝙛𝙤𝙣𝙩-𝙛𝙖𝙢𝙞𝙡𝙮: 𝘼𝙧𝙞𝙖𝙡, 𝙨𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛;
+  𝙢𝙖𝙧𝙜𝙞𝙣: 10𝙥𝙭;
+  𝙗𝙤𝙭-𝙨𝙝𝙖𝙙𝙤𝙬: 0 4𝙥𝙭 8𝙥𝙭 𝙧𝙜𝙗𝙖(0, 0, 0, 0.2);
+  𝙩𝙧𝙖𝙣𝙨𝙞𝙩𝙞𝙤𝙣: 𝙗𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙-𝙘𝙤𝙡𝙤𝙧 0.3𝙨 𝙚𝙖𝙨𝙚, 𝙩𝙧𝙖𝙣𝙨𝙛𝙤𝙧𝙢 0.3𝙨 𝙚𝙖𝙨𝙚;
+">
 
-  <!-- زر الموقع هنا -->
-  <a href="https://www.google.com/maps?q=R5QC%2BC86+Mesra" target="_blank" style="
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 25px;
-    background-color: #17a2b8;
-    color: white;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  ">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16">
-      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-    </svg>
-        <meta charset="UTF-8">
-    <title> 🔎موقعنا على الخريطة📌</title>
-    <link rel="stylesheet" href="style.css">
-    <button class="map-button">📌موقعنا على الخريطة🔎</button>
-</body>
-</html>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap" rel="stylesheet">
-  </a>
-</body>
-</html><section id="contact">
-  <h2>📞اتصل بنا📞</h2>
- <form action="https://formspree.io/f/myzwyrjk" method="POST" style="max-width: 500px; margin: auto; direction: rtl; font-family: Arial;">
+<𝙨𝙫𝙜 𝙭𝙢𝙡𝙣𝙨="𝙝𝙩𝙩𝙥://𝙬𝙬𝙬.𝙬3.𝙤𝙧𝙜/2000/𝙨𝙫𝙜" 𝙬𝙞𝙙𝙩𝙝="20" 𝙝𝙚𝙞𝙜𝙝𝙩="20" 𝙛𝙞𝙡𝙡="𝙬𝙝𝙞𝙩𝙚" 𝙫𝙞𝙚𝙬𝘽𝙤𝙭="0 0 16 16">
+  <𝙥𝙖𝙩𝙝 𝙙="𝙈8 16𝙨6-5.686 6-10𝘼6 6 0 0 0 2 6𝙘0 4.314 6 10 6 10𝙯𝙢0-7𝙖3 3 0 1 1 0-6 3 3 0 0 1 0 6𝙯"/>
+</𝙨𝙫𝙜>
 
-  <label for="name">الاسم:</label><br>
-  <input type="text" id="name" name="name" placeholder="اكتب اسمك🖋" required style="width: 100%; padding: 10px; margin: 5px 0;"><br>
-  <label for="email">البريد الإلكتروني📬:</label><br>
-  <input type="email" id="email" name="email" placeholder="example@gmail.com" required style="width: 100%; padding: 10px; margin: 5px 0;"><br>
-<label for="phone">رقم الهاتف:</label><br>
-<input type="tel" id="phone" name="phone" placeholder="05XXXXXXXX-06XXXXXXXX-07XXXXXXXX"required style="width: 100%; padding: 10px; margin: 5px 0;"><br>
+📌موقعنا على الخريطة🔎
 
-<label for="ولاية">الولاية:</label><br>
+</𝙖>
 
-<div class="select-wrapper">
-  <select id="wilaya" name="wilaya" required>
-    <option value="">اختر ولايتك</option>
+<𝙨𝙚𝙘𝙩𝙞𝙤𝙣 𝙞𝙙="𝙘𝙤𝙣𝙩𝙖𝙘𝙩">
 
-    <option value="01">01 - أدرار</option>
-    <option value="02">02 - الشلف</option>
-    <option value="03">03 - الأغواط</option>
-    <option value="04">04 - أم البواقي</option>
-    <option value="05">05 - باتنة</option>
-    <option value="06">06 - بجاية</option>
-    <option value="07">07 - بسكرة</option>
-    <option value="08">08 - بشار</option>
-    <option value="09">09 - البليدة</option>
-    <option value="10">10 - البويرة</option>
-    <option value="11">11 - تمنراست</option>
-    <option value="12">12 - تبسة</option>
-    <option value="13">13 - تلمسان</option>
-    <option value="14">14 - تيارت</option>
-    <option value="15">15 - تيزي وزو</option>
-    <option value="16">16 - الجزائر</option>
-    <option value="17">17 - الجلفة</option>
-    <option value="18">18 - جيجل</option>
-    <option value="19">19 - سطيف</option>
-    <option value="20">20 - سعيدة</option>
-    <option value="21">21 - سكيكدة</option>
-    <option value="22">22 - سيدي بلعباس</option>
-    <option value="23">23 - عنابة</option>
-    <option value="24">24 - قالمة</option>
-    <option value="25">25 - قسنطينة</option>
-    <option value="26">26 - المدية</option>
-    <option value="27">27 - مستغانم</option>
-    <option value="28">28 - المسيلة</option>
-    <option value="29">29 - معسكر</option>
-    <option value="30">30 - ورقلة</option>
-    <option value="31">31 - وهران</option>
-    <option value="32">32 - البيض</option>
-    <option value="33">33 - إليزي</option>
-    <option value="34">34 - برج بوعريريج</option>
-    <option value="35">35 - بومرداس</option>
-    <option value="36">36 - الطارف</option>
-    <option value="37">37 - تندوف</option>
-    <option value="38">38 - تيسمسيلت</option>
-    <option value="39">39 - الوادي</option>
-    <option value="40">40 - خنشلة</option>
-    <option value="41">41 - سوق أهراس</option>
-    <option value="42">42 - تيبازة</option>
-    <option value="43">43 - ميلة</option>
-    <option value="44">44 - عين الدفلى</option>
-    <option value="45">45 - النعامة</option>
-    <option value="46">46 - عين تموشنت</option>
-    <option value="47">47 - غرداية</option>
-    <option value="48">48 - غليزان</option>
-    <option value="49">49 - تيميمون</option>
-    <option value="50">50 - برج باجي مختار</option>
-    <option value="51">51 - أولاد جلال</option>
-    <option value="52">52 - بني عباس</option>
-    <option value="53">53 - عين صالح</option>
-    <option value="54">54 - عين قزام</option>
-    <option value="55">55 - تقرت</option>
-    <option value="56">56 - جانت</option>
-    <option value="57">57 - المغير</option>
-    <option value="58">58 - المنيعة</option>
-  </select>
-</div>
+<𝙝2>📞اتصل بنا📞</𝙝2>
 
-  <label for="message">أكتب رسالة📝:</label><br>
-  <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." rows="5" required style="width: 100%; padding: 10px; margin: 5px 0;"></textarea><br>
+<𝙛𝙤𝙧𝙢 𝙖𝙘𝙩𝙞𝙤𝙣="𝙝𝙩𝙩𝙥𝙨://𝙛𝙤𝙧𝙢𝙨𝙥𝙧𝙚𝙚.𝙞𝙤/𝙛/𝙢𝙮𝙯𝙬𝙮𝙧𝙟𝙠" 𝙢𝙚𝙩𝙝𝙤𝙙="𝙋𝙊𝙎𝙏" 𝙨𝙩𝙮𝙡𝙚="𝙢𝙖𝙭-𝙬𝙞𝙙𝙩𝙝: 500𝙥𝙭; 𝙢𝙖𝙧𝙜𝙞𝙣: 𝙖𝙪𝙩𝙤; 𝙙𝙞𝙧𝙚𝙘𝙩𝙞𝙤𝙣: 𝙧𝙩𝙡; 𝙛𝙤𝙣𝙩-𝙛𝙖𝙢𝙞𝙡𝙮: 𝘼𝙧𝙞𝙖𝙡;">
 
-  <button type="submit" style="background-color: #28a745; color: white; padding: 8px 10px; border: none; cursor: pointer;">
-    إرسال...📨
-  </button>
-   </footer>
-<br><br>
+<𝙡𝙖𝙗𝙚𝙡 𝙛𝙤𝙧="𝙣𝙖𝙢𝙚">الاسم:</𝙡𝙖𝙗𝙚𝙡><𝙗𝙧>
 
-  <footer class="footer-box">
-  <p class="rights"> موقعي الشخصي🪪. جميع الحقوق محفوظة© 2026🔒</p>
-  <p class="dev">🔹  تم تحديث بواسطة <span>•|🅷ⓐ🅢𝐒Ａ𝗡_ᴬᵁᵀᴼ|•</span>
-<p class="fb">
-  📎صفحتنا على الفايسبوك📎: 
- <a href="https://www.facebook.com/lhsn.shyr" target="_blank" class="fb-neon-btn">
-      <i class="fab fa-facebook-f"></i>
-      اضغط هنا
-</a>
-</footer>
+<𝙞𝙣𝙥𝙪𝙩 𝙩𝙮𝙥𝙚="𝙩𝙚𝙭𝙩" 𝙞𝙙="𝙣𝙖𝙢𝙚" 𝙣𝙖𝙢𝙚="𝙣𝙖𝙢𝙚" 𝙥𝙡𝙖𝙘𝙚𝙝𝙤𝙡𝙙𝙚𝙧="اكتب اسمك🖋" 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙙 𝙨𝙩𝙮𝙡𝙚="𝙬𝙞𝙙𝙩𝙝: 100%; 𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 10𝙥𝙭; 𝙢𝙖𝙧𝙜𝙞𝙣: 5𝙥𝙭 0;"><𝙗𝙧>
 
+<𝙡𝙖𝙗𝙚𝙡 𝙛𝙤𝙧="𝙚𝙢𝙖𝙞𝙡">البريد الإلكتروني📬:</𝙡𝙖𝙗𝙚𝙡><𝙗𝙧>
 
-<p class="bilal-tech">̷🪽🖥𝗯ỉ𝕝Ｅ𝖫|𝕋Ⓔ🅒🅷🪽</p>
-<style>
-  .bilal-tech {
-    display: inline-block;
-    padding: 14px 28px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-    background: #0c1b2a; /* خلفية غامقة */
-    border-radius: 12px; /* الحواف المستديرة */
-    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.35); /* ظل فاتح مثل الزر */
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: Arial, sans-serif;
+<𝙞𝙣𝙥𝙪𝙩 𝙩𝙮𝙥𝙚="𝙚𝙢𝙖𝙞𝙡" 𝙞𝙙="𝙚𝙢𝙖𝙞𝙡" 𝙣𝙖𝙢𝙚="𝙚𝙢𝙖𝙞𝙡" 𝙥𝙡𝙖𝙘𝙚𝙝𝙤𝙡𝙙𝙚𝙧="𝙚𝙭𝙖𝙢𝙥𝙡𝙚@𝙜𝙢𝙖𝙞𝙡.𝙘𝙤𝙢" 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙙 𝙨𝙩𝙮𝙡𝙚="𝙬𝙞𝙙𝙩𝙝: 100%; 𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 10𝙥𝙭; 𝙢𝙖𝙧𝙜𝙞𝙣: 5𝙥𝙭 0;"><𝙗𝙧>
+
+<𝙡𝙖𝙗𝙚𝙡 𝙛𝙤𝙧="𝙥𝙝𝙤𝙣𝙚">رقم الهاتف:</𝙡𝙖𝙗𝙚𝙡><𝙗𝙧>
+
+<𝙞𝙣𝙥𝙪𝙩 𝙩𝙮𝙥𝙚="𝙩𝙚𝙡" 𝙞𝙙="𝙥𝙝𝙤𝙣𝙚" 𝙣𝙖𝙢𝙚="𝙥𝙝𝙤𝙣𝙚" 𝙥𝙡𝙖𝙘𝙚𝙝𝙤𝙡𝙙𝙚𝙧="05𝙓𝙓𝙓𝙓𝙓𝙓𝙓𝙓-06𝙓𝙓𝙓𝙓𝙓𝙓𝙓𝙓-07𝙓𝙓𝙓𝙓𝙓𝙓𝙓𝙓" 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙙 𝙨𝙩𝙮𝙡𝙚="𝙬𝙞𝙙𝙩𝙝: 100%; 𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 10𝙥𝙭; 𝙢𝙖𝙧𝙜𝙞𝙣: 5𝙥𝙭 0;"><𝙗𝙧>
+
+<𝙡𝙖𝙗𝙚𝙡 𝙛𝙤𝙧="ولاية">الولاية:</𝙡𝙖𝙗𝙚𝙡><𝙗𝙧>
+
+<𝙙𝙞𝙫 𝙘𝙡𝙖𝙨𝙨="𝙨𝙚𝙡𝙚𝙘𝙩-𝙬𝙧𝙖𝙥𝙥𝙚𝙧">
+  <𝙨𝙚𝙡𝙚𝙘𝙩 𝙞𝙙="𝙬𝙞𝙡𝙖𝙮𝙖" 𝙣𝙖𝙢𝙚="𝙬𝙞𝙡𝙖𝙮𝙖" 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙙>
+
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="">اختر ولايتك</𝙤𝙥𝙩𝙞𝙤𝙣>
+
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="01">01 - أدرار</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="02">02 - الشلف</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="03">03 - الأغواط</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="04">04 - أم البواقي</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="05">05 - باتنة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="06">06 - بجاية</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="07">07 - بسكرة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="08">08 - بشار</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="09">09 - البليدة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="10">10 - البويرة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="11">11 - تمنراست</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="12">12 - تبسة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="13">13 - تلمسان</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="14">14 - تيارت</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="15">15 - تيزي وزو</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="16">16 - الجزائر</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="17">17 - الجلفة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="18">18 - جيجل</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="19">19 - سطيف</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="20">20 - سعيدة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="21">21 - سكيكدة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="22">22 - سيدي بلعباس</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="23">23 - عنابة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="24">24 - قالمة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="25">25 - قسنطينة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="26">26 - المدية</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="27">27 - مستغانم</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="28">28 - المسيلة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="29">29 - معسكر</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="30">30 - ورقلة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="31">31 - وهران</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="32">32 - البيض</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="33">33 - إليزي</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="34">34 - برج بوعريريج</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="35">35 - بومرداس</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="36">36 - الطارف</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="37">37 - تندوف</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="38">38 - تيسمسيلت</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="39">39 - الوادي</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="40">40 - خنشلة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="41">41 - سوق أهراس</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="42">42 - تيبازة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="43">43 - ميلة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="44">44 - عين الدفلى</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="45">45 - النعامة</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="46">46 - عين تموشنت</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="47">47 - غرداية</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="48">48 - غليزان</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="49">49 - تيميمون</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="50">50 - برج باجي مختار</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="51">51 - أولاد جلال</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="52">52 - بني عباس</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="53">53 - عين صالح</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="54">54 - عين قزام</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="55">55 - تقرت</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="56">56 - جانت</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="57">57 - المغير</𝙤𝙥𝙩𝙞𝙤𝙣>
+    <𝙤𝙥𝙩𝙞𝙤𝙣 𝙫𝙖𝙡𝙪𝙚="58">58 - المنيعة</𝙤𝙥𝙩𝙞𝙤𝙣>
+
+  </𝙨𝙚𝙡𝙚𝙘𝙩>
+</𝙙𝙞𝙫>
+
+<𝙡𝙖𝙗𝙚𝙡 𝙛𝙤𝙧="𝙢𝙚𝙨𝙨𝙖𝙜𝙚">أكتب رسالة📝:</𝙡𝙖𝙗𝙚𝙡><𝙗𝙧>
+
+<𝙩𝙚𝙭𝙩𝙖𝙧𝙚𝙖 𝙞𝙙="𝙢𝙚𝙨𝙨𝙖𝙜𝙚" 𝙣𝙖𝙢𝙚="𝙢𝙚𝙨𝙨𝙖𝙜𝙚" 𝙥𝙡𝙖𝙘𝙚𝙝𝙤𝙡𝙙𝙚𝙧="اكتب رسالتك هنا..." 𝙧𝙤𝙬𝙨="5" 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙙 𝙨𝙩𝙮𝙡𝙚="𝙬𝙞𝙙𝙩𝙝: 100%; 𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 10𝙥𝙭; 𝙢𝙖𝙧𝙜𝙞𝙣: 5𝙥𝙭 0;"></𝙩𝙚𝙭𝙩𝙖𝙧𝙚𝙖><𝙗𝙧>
+
+<𝙗𝙪𝙩𝙩𝙤𝙣 𝙩𝙮𝙥𝙚="𝙨𝙪𝙗𝙢𝙞𝙩" 𝙨𝙩𝙮𝙡𝙚="𝙗𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙-𝙘𝙤𝙡𝙤𝙧: #28𝙖745; 𝙘𝙤𝙡𝙤𝙧: 𝙬𝙝𝙞𝙩𝙚; 𝙥𝙖𝙙𝙙𝙞𝙣𝙜: 8𝙥𝙭 10𝙥𝙭; 𝙗𝙤𝙧𝙙𝙚𝙧: 𝙣𝙤𝙣𝙚; 𝙘𝙪𝙧𝙨𝙤𝙧: 𝙥𝙤𝙞𝙣𝙩𝙚𝙧;">
+  إرسال...📨
+</𝙗𝙪𝙩𝙩𝙤𝙣>
+
+</𝙛𝙤𝙧𝙢>
+
+</𝙨𝙚𝙘𝙩𝙞𝙤𝙣>
+
+<𝙗𝙧><𝙗𝙧>
+
+<𝙛𝙤𝙤𝙩𝙚𝙧 𝙘𝙡𝙖𝙨𝙨="𝙛𝙤𝙤𝙩𝙚𝙧-𝙗𝙤𝙭">
+
+<𝙥 𝙘𝙡𝙖𝙨𝙨="𝙧𝙞𝙜𝙝𝙩𝙨">موقعي الشخصي🪪. جميع الحقوق محفوظة© 2026🔒</𝙥>
+
+<𝙥 𝙘𝙡𝙖𝙨𝙨="𝙙𝙚𝙫">
+🔹 تم تحديث بواسطة <𝙨𝙥𝙖𝙣>•|🅷ⓐ🅢𝐒Ａ𝗡_ᴬᵁᵀᴼ|•</𝙨𝙥𝙖𝙣>
+</𝙥>
+
+<𝙥 𝙘𝙡𝙖𝙨𝙨="𝙛𝙗">
+📎صفحتنا على الفايسبوك📎:
+</𝙥>
+
+<𝙖 𝙝𝙧𝙚𝙛="𝙝𝙩𝙩𝙥𝙨://𝙬𝙬𝙬.𝙛𝙖𝙘𝙚𝙗𝙤𝙤𝙠.𝙘𝙤𝙢/𝙡𝙝𝙨𝙣.𝙨𝙝𝙮𝙧" 𝙩𝙖𝙧𝙜𝙚𝙩="_𝙗𝙡𝙖𝙣𝙠" 𝙘𝙡𝙖𝙨𝙨="𝙛𝙗-𝙣𝙚𝙤𝙣-𝙗𝙩𝙣">
+  <𝙞 𝙘𝙡𝙖𝙨𝙨="𝙛𝙖𝙗 𝙛𝙖-𝙛𝙖𝙘𝙚𝙗𝙤𝙤𝙠-𝙛"></𝙞>
+  اضغط هنا
+</𝙖>
+
+</𝙛𝙤𝙤𝙩𝙚𝙧>
+
+<𝙥 𝙘𝙡𝙖𝙨𝙨="𝙗𝙞𝙡𝙖𝙡-𝙩𝙚𝙘𝙝">̷🪽🖥𝗯𝙞̉𝕝Ｅ𝖫|𝕋Ⓔ🅒🅷🪽</𝙥>
+
+<𝙥 𝙘𝙡𝙖𝙨𝙨="𝙘𝙪𝙨𝙩𝙤𝙢-𝙗𝙤𝙭" 𝙞𝙙="𝙩𝙝𝙖𝙣𝙠𝙨">
+شكراً✨ على زيارتك 🌹موقعي👑
+</𝙥>
+
+<!-- 𝙎𝙘𝙧𝙞𝙥𝙩𝙨 -->
+
+<𝙨𝙘𝙧𝙞𝙥𝙩 𝙨𝙧𝙘="𝙝𝙩𝙩𝙥𝙨://𝙪𝙣𝙥𝙠𝙜.𝙘𝙤𝙢/𝙖𝙤𝙨@2.3.1/𝙙𝙞𝙨𝙩/𝙖𝙤𝙨.𝙟𝙨"></𝙨𝙘𝙧𝙞𝙥𝙩>
+
+<𝙨𝙘𝙧𝙞𝙥𝙩>
+𝘼𝙊𝙎.𝙞𝙣𝙞𝙩();
+</𝙨𝙘𝙧𝙞𝙥𝙩>
+
+<𝙨𝙘𝙧𝙞𝙥𝙩>
+𝙘𝙤𝙣𝙨𝙩 𝙩𝙚𝙭𝙩 = "مرحبا بكم في متجرنا المتواضع";
+𝙡𝙚𝙩 𝙞 = 0;
+𝙘𝙤𝙣𝙨𝙩 𝙨𝙥𝙚𝙚𝙙 = 100;
+
+𝙛𝙪𝙣𝙘𝙩𝙞𝙤𝙣 𝙩𝙮𝙥𝙚𝙒𝙧𝙞𝙩𝙚𝙧() {
+  𝙞𝙛 (𝙞 < 𝙩𝙚𝙭𝙩.𝙡𝙚𝙣𝙜𝙩𝙝) {
+    𝙙𝙤𝙘𝙪𝙢𝙚𝙣𝙩.𝙜𝙚𝙩𝙀𝙡𝙚𝙢𝙚𝙣𝙩𝘽𝙮𝙄𝙙("𝙩𝙮𝙥𝙞𝙣𝙜").𝙩𝙚𝙭𝙩𝘾𝙤𝙣𝙩𝙚𝙣𝙩 += 𝙩𝙚𝙭𝙩.𝙘𝙝𝙖𝙧𝘼𝙩(𝙞);
+    𝙞++;
+    𝙨𝙚𝙩𝙏𝙞𝙢𝙚𝙤𝙪𝙩(𝙩𝙮𝙥𝙚𝙒𝙧𝙞𝙩𝙚𝙧, 𝙨𝙥𝙚𝙚𝙙);
   }
-</style>
-<style>
-  .footer-box {
-    text-align: center;
-    background: #111;       /* خلفية داكنة */
-    padding: 25px 15px;
-    color: #eee;            /* لون النص */
-    font-family: "Tahoma", sans-serif;
-    border-top: 2px solid #00d4ff; /* خط علوي ملون */
-  }
+}
 
-  .footer-box .rights {
-    font-size: 15px;
-    margin: 0 0 8px;
-    opacity: 0.9;
-  }
+𝙬𝙞𝙣𝙙𝙤𝙬.𝙖𝙙𝙙𝙀𝙫𝙚𝙣𝙩𝙇𝙞𝙨𝙩𝙚𝙣𝙚𝙧("𝘿𝙊𝙈𝘾𝙤𝙣𝙩𝙚𝙣𝙩𝙇𝙤𝙖𝙙𝙚𝙙", 𝙩𝙮𝙥𝙚𝙒𝙧𝙞𝙩𝙚𝙧);
+</𝙨𝙘𝙧𝙞𝙥𝙩>
 
-  .footer-box .dev {
-    font-size: 17px;
-    font-weight: 600;
-    margin: 0 0 10px;
-  }
+<𝙨𝙘𝙧𝙞𝙥𝙩>
+𝙡𝙚𝙩 𝙞𝙣𝙙𝙚𝙭 = 0;
+𝙘𝙤𝙣𝙨𝙩 𝙨𝙡𝙞𝙙𝙚𝙨 = 𝙙𝙤𝙘𝙪𝙢𝙚𝙣𝙩.𝙦𝙪𝙚𝙧𝙮𝙎𝙚𝙡𝙚𝙘𝙩𝙤𝙧𝘼𝙡𝙡('.𝙨𝙡𝙞𝙙𝙚');
 
-  .footer-box .dev span {
-    color: #00d4ff; /* إبراز اسم المطور */
-    font-weight: bold;
-  }
-  .footer-box .contact {
-    font-size: 16px;
-    margin: 0;
-    font-weight: 500;
-  }
+𝙨𝙚𝙩𝙄𝙣𝙩𝙚𝙧𝙫𝙖𝙡(() => {
+  𝙨𝙡𝙞𝙙𝙚𝙨.𝙛𝙤𝙧𝙀𝙖𝙘𝙝((𝙨𝙡𝙞𝙙𝙚, 𝙞) => {
+    𝙨𝙡𝙞𝙙𝙚.𝙨𝙩𝙮𝙡𝙚.𝙙𝙞𝙨𝙥𝙡𝙖𝙮 = 𝙞 === 𝙞𝙣𝙙𝙚𝙭 ? '𝙗𝙡𝙤𝙘𝙠' : '𝙣𝙤𝙣𝙚';
+  });
 
-  .footer-box .contact span {
-    color: #fff;
-    background: #00d4ff;
-    padding: 4px 10px;
-    border-radius: 8px;
-    margin: 0 4px;
-    display: inline-block;
-  }
-</style>
-    <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
-</body>
-</html>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();<section data-aos="fade-up" data-aos-duration="1000">
-</script>
-<p class="custom-box" id="thanks">شكراً✨ على زيارتك 🌹موقعي👑</p>
+  𝙞𝙣𝙙𝙚𝙭 = (𝙞𝙣𝙙𝙚𝙭 + 1) % 𝙨𝙡𝙞𝙙𝙚𝙨.𝙡𝙚𝙣𝙜𝙩𝙝;
+}, 3000);
+</𝙨𝙘𝙧𝙞𝙥𝙩>
 
-<script>
-const thanks = document.getElementById("thanks");
+<𝙨𝙘𝙧𝙞𝙥𝙩>
+𝙘𝙤𝙣𝙨𝙩 𝙩𝙝𝙖𝙣𝙠𝙨 = 𝙙𝙤𝙘𝙪𝙢𝙚𝙣𝙩.𝙜𝙚𝙩𝙀𝙡𝙚𝙢𝙚𝙣𝙩𝘽𝙮𝙄𝙙("𝙩𝙝𝙖𝙣𝙠𝙨");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      thanks.classList.add("show");
+𝙘𝙤𝙣𝙨𝙩 𝙤𝙗𝙨𝙚𝙧𝙫𝙚𝙧 = 𝙣𝙚𝙬 𝙄𝙣𝙩𝙚𝙧𝙨𝙚𝙘𝙩𝙞𝙤𝙣𝙊𝙗𝙨𝙚𝙧𝙫𝙚𝙧(𝙚𝙣𝙩𝙧𝙞𝙚𝙨 => {
+  𝙚𝙣𝙩𝙧𝙞𝙚𝙨.𝙛𝙤𝙧𝙀𝙖𝙘𝙝(𝙚𝙣𝙩𝙧𝙮 => {
+    𝙞𝙛(𝙚𝙣𝙩𝙧𝙮.𝙞𝙨𝙄𝙣𝙩𝙚𝙧𝙨𝙚𝙘𝙩𝙞𝙣𝙜){
+      𝙩𝙝𝙖𝙣𝙠𝙨.𝙘𝙡𝙖𝙨𝙨𝙇𝙞𝙨𝙩.𝙖𝙙𝙙("𝙨𝙝𝙤𝙬");
     }
   });
 });
 
-observer.observe(thanks);
-</script>
-<style>
-.custom-box {
-  opacity: 0;
-  transform: translateY(80px);
-  transition: all 1.2s ease;
-}
+𝙤𝙗𝙨𝙚𝙧𝙫𝙚𝙧.𝙤𝙗𝙨𝙚𝙧𝙫𝙚(𝙩𝙝𝙖𝙣𝙠𝙨);
+</𝙨𝙘𝙧𝙞𝙥𝙩>
 
-.custom-box.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-  .custom-box {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #222;              /* لون النص */
-    background: #fff;         /* خلفية بيضاء */
-    border-radius: 12px;      /* حواف دائرية */
-    border: 2px dashed #333;  /* إطار متقطع مثل المثال */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* ظل */
-    font-family: "Tahoma", sans-serif;
-    text-align: center;
-  }
-<style>
-  🪽🖥𝗯ỉ𝕝Ｅ𝖫|𝕋Ⓔ🅒🅷🪽 {
-    font-size: 42px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #ff8a00, #ff3d81, #7aff, #00d4ff, #00c853, #ffe100);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientFlow 6s ease infinite;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px 0;
-  }
+<𝙨𝙘𝙧𝙞𝙥𝙩 𝙨𝙧𝙘="𝙝𝙩𝙩𝙥𝙨://𝙠𝙞𝙩.𝙛𝙤𝙣𝙩𝙖𝙬𝙚𝙨𝙤𝙢𝙚.𝙘𝙤𝙢/𝙮𝙤𝙪𝙧𝙠𝙞𝙩𝙘𝙤𝙙𝙚.𝙟𝙨" 𝙘𝙧𝙤𝙨𝙨𝙤𝙧𝙞𝙜𝙞𝙣="𝙖𝙣𝙤𝙣𝙮𝙢𝙤𝙪𝙨"></𝙨𝙘𝙧𝙞𝙥𝙩>
+
+</𝙗𝙤𝙙𝙮>
+</𝙝𝙩𝙢𝙡>
